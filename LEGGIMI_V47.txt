@@ -1,0 +1,7 @@
+Road 70.3 V47 Safe Sync
+
+Corregge la sovrascrittura distruttiva della V46: prima di salvare unisce le attività locali e cloud per ID con una transazione Firestore. Un dispositivo vuoto non cancella il cloud.
+
+Caricare tutti i file estratti nella root GitHub e fare Commit changes. Poi rimuovere la vecchia PWA/cancellare i dati del sito sul telefono una sola volta e riaprire il sito.
+
+Nota: per sicurezza, la cancellazione locale di una attività non viene propagata al cloud in questa versione.
