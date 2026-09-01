@@ -1,6 +1,6 @@
 "use strict";
 (function(){
-const firebaseConfig={apiKey:"AIzaSyDjtXH6eILoXyT3a7d-awm69o2BUImyOaY",authDomain:"road703-3235b.firebaseapp.com",projectId:"road703-3235b",storageBucket:"road703-3235b.firebasestorage.app",messagingSenderId:"208181077306",appId:"1:208181077306:web:f4da7d76e3408eda5d1c03"};
+const firebaseConfig={apiKey:"AIzaSyDJtvH6eTLoXyT3a7d-awm69o2BUImvQaY",authDomain:"road703-3235b.firebaseapp.com",projectId:"road703-3235b",storageBucket:"road703-3235b.firebasestorage.app",messagingSenderId:"208181077306",appId:"1:208181077306:web:f4da7d76e3408eda5d1c03"};
 let user=null,unsubscribe=null,timer=null,applying=false;
 function emit(status,title,description){window.dispatchEvent(new CustomEvent("road703-sync-status",{detail:{status,title,description,loggedIn:!!user}}))}
 try{firebase.initializeApp(firebaseConfig)}catch(e){if(!/already exists/i.test(String(e&&e.message)))throw e}
