@@ -1,4 +1,4 @@
-const CACHE = "road703-v52-auto-recalibration";
+const CACHE = "road703-v53-strength-total";
 const ASSETS = [
   "./",
   "./index.html",
