@@ -1,4 +1,4 @@
-const CACHE = "road703-v48-json-safe-2";
+const CACHE = "road703-v49-soft-delete-fit";
 const ASSETS = [
   "./",
   "./index.html",
