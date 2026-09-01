@@ -1,0 +1,19 @@
+ROAD TO 70.3 V52 - RICALIBRAZIONE AUTOMATICA
+
+La V52 mantiene tutte le correzioni V51, inclusa l'importazione Garmin Forza.
+
+Ogni blocco concluso di 4 settimane viene valutato usando:
+- percentuale di sedute importate e associate;
+- minuti eseguiti rispetto ai minuti pianificati;
+- differenza tra RPE reale e RPE previsto;
+- numero minimo di attività valide per disciplina.
+
+Regole conservative per il blocco successivo:
+- +3% se aderenza >=90%, volume >=85% e RPE almeno 0,5 sotto il previsto;
+- -5% se aderenza <70%, volume <65% o RPE almeno 1,5 sopra il previsto;
+- -2% nei casi intermedi da consolidare;
+- invariato negli altri casi o con meno di 2 attività valide.
+
+L'app modifica solo la DURATA delle sedute del blocco successivo, arrotondata a 5 minuti. Non stima FTP, passo soglia o CSS senza dati specifici affidabili.
+
+Alla prima apertura dopo la chiusura del blocco compare un avviso. Il dettaglio resta nella schermata Performance, sezione Ricalibrazione automatica.

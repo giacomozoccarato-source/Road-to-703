@@ -1,4 +1,4 @@
-const CACHE = "road703-v50-status-bike-ui";
+const CACHE = "road703-v52-auto-recalibration";
 const ASSETS = [
   "./",
   "./index.html",
