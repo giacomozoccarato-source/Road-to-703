@@ -1,4 +1,4 @@
-const CACHE = "road703-v53-strength-total";
+const CACHE = "road703-v54-strength-total-sync";
 const ASSETS = [
   "./",
   "./index.html",
