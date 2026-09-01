@@ -1,4 +1,4 @@
-const CACHE = "road703-v49-soft-delete-fit";
+const CACHE = "road703-v50-status-bike-ui";
 const ASSETS = [
   "./",
   "./index.html",

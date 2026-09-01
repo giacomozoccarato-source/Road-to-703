@@ -1,0 +1,20 @@
+ROAD 70.3 V50
+
+Modifiche incluse:
+1. Ogni attività importata e associata a una seduta del calendario viene marcata Completata.
+2. Correzione automatica delle attività già associate ma ancora visualizzate come Saltate.
+3. Supporto CSV Garmin riepilogo bici: durata, distanza, velocità media/massima, potenza media/massima, NP, FC e cadenza.
+4. Rimossa la lista duplicata dei resoconti dalla pagina Importa. I resoconti, Modifica ed Elimina restano nel dettaglio del Calendario.
+5. Nel Calendario compare il badge verde “✅ Attività eseguita”.
+6. Sincronizzazione ed eliminazione cloud V49 mantenute.
+
+INSTALLAZIONE
+- Estrarre lo ZIP.
+- Caricare tutti i file estratti nella root del repository GitHub, sostituendo quelli esistenti.
+- Fare Commit changes.
+- Riaprire l’app su PC e telefono. Se resta la V49, cancellare una sola volta i dati del sito/PWA sul dispositivo.
+- In Firestore appVersion deve diventare V50-status-bike-ui.
+
+TEST RAPIDO
+- Aprire una vecchia attività associata che risultava Saltata: deve comparire Completato.
+- Importare bici 29.09.csv: il dettaglio calendario deve mostrare circa 135 min, 67,82 km, 30,1 km/h, 186 W medi, 212 W NP e 79 rpm.
