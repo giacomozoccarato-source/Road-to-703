@@ -1,0 +1,10 @@
+ROAD TO 70.3 V59
+
+Correzioni:
+- CSV MagneticDays/raw: durata calcolata tra primo e ultimo timestamp e mostrata anche come mm:ss.
+- Distanza CSV: differenza tra valore finale e iniziale, non massimo assoluto.
+- Velocita massima aggiunta.
+- Reimportazione: una attivita valida sostituisce anche uno stato manuale Saltato/Parziale, se non esiste gia un collegamento reale.
+- Versione centrale V59 e cache service worker road703-V59.
+
+Pubblicazione: caricare tutti i file nella root GitHub sostituendo gli esistenti. Non cancellare i dati dell app. Reimportare rulli 02.09.csv con data 02/09/2026 e disciplina Bici/Rulli.
