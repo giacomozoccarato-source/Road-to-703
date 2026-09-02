@@ -1,0 +1,3 @@
+ROAD TO 70.3 V57
+
+Correzione critica: i dati salvati localmente o su Firebase non possono piu sovrascrivere minuti, descrizione, target o data del piano ufficiale. Stato e collegamenti alle attivita sono conservati. p15 viene forzato a 57 minuti anche se il salvataggio precedente contiene 65. version.js e compatibile con pagina e service worker. Caricare tutti i file dello ZIP nella root GitHub sostituendo gli esistenti.
