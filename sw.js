@@ -1,6 +1,9 @@
-const CACHE = "road703-v54-strength-total-sync";
+importScripts("./version.js");
+const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
+const CACHE = `road703-${APP_VERSION}`;
 const ASSETS = [
   "./",
+  "./version.js",
   "./index.html",
   "./styles.css",
   "./data.js",
@@ -33,7 +36,7 @@ self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
 
   const url = new URL(event.request.url);
-  const liveFiles = ["/app.js", "/firebase-sync.js", "/sw.js"];
+  const liveFiles = ["/version.js", "/app.js", "/data.js", "/strength.js", "/styles.css", "/firebase-sync.js", "/sw.js", "/manifest.webmanifest"];
   const useNetworkFirst = event.request.mode === "navigate" || liveFiles.some(name => url.pathname.endsWith(name));
 
   if (useNetworkFirst) {

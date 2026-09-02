@@ -1,0 +1,19 @@
+ROAD TO 70.3 V56
+
+MODIFICHE PRINCIPALI
+- Verifica delle 424 voci del piano.
+- Durate corrette nelle sedute con composizione temporale determinabile.
+- Regola applicata: il recupero e incluso anche dopo l'ultima ripetuta.
+- p15 corretto da 65 a 57 minuti.
+- Aggiunta della durata pianificata esplicita nelle descrizioni prive di totale, per evitare ambiguita.
+- APP_VERSION centralizzata in version.js.
+- Versione V56 usata per interfaccia, cache, backup, importazione e metadati Firestore.
+- Chiave dati stabile road703-state, con migrazione dalle vecchie chiavi v19/v20/v21, per non perdere lo storico a ogni release.
+- Service worker network-first per tutti i file applicativi modificabili.
+
+AUDIT
+- 46 interventi registrati in AUDIT_DURATE_V56.csv.
+- Le sedute con recuperi a durata variabile, come recupero in discesa, mantengono il target pianificato e riportano ora esplicitamente la durata pianificata.
+
+DEPLOY
+Caricare tutti i file di questa cartella nella root GitHub, sostituendo gli esistenti. Non eliminare i dati Firebase.
