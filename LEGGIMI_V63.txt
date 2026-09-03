@@ -1,0 +1,11 @@
+ROAD TO 70.3 V63
+Base V62-debug.
+
+Correzione decoder FIT:
+- le definizioni dei Developer Fields vengono ora memorizzate;
+- durante ogni Data Message vengono consumati anche i byte dei Developer Fields;
+- questo evita il disallineamento del flusso binario che trasformava i campi Session in array errati e impediva la lettura di tempo e distanza;
+- mantenuto temporaneamente il pannello DEBUG FIT GREZZO per verificare il risultato;
+- cache aggiornata a V63.
+
+Test: caricare tutti i file, verificare V63, eliminare l attivita precedente e reimportare il FIT originale.
