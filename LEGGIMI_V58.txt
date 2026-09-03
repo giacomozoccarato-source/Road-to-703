@@ -1,14 +1,2 @@
 ROAD TO 70.3 V58
-
-Correzione parser FIT MagneticDays:
-- priorita ai campi FIT enhanced_avg_speed (124) ed enhanced_max_speed (125) della sessione;
-- priorita ai campi FIT enhanced_avg_speed (110) ed enhanced_max_speed (111) dei lap;
-- mantenuti i campi standard come fallback;
-- distanza FIT resta fonte primaria; calcolo velocita x durata solo se la distanza non e disponibile;
-- versione centrale aggiornata a V58 e revisione piano 2026-09-02b.
-
-IMPORTANTE PER L'ATTIVITA GIA SALVATA:
-Eliminare il resoconto MagneticDays V57 errato e reimportare lo stesso file FIT. L'app sostituira comunque una precedente importazione con stesso nome file, data e disciplina.
-
-PUBBLICAZIONE:
-Caricare tutti i file dello ZIP nella root GitHub sostituendo gli esistenti. Non cancellare i dati dell'app. Il nuovo service worker usera la cache road703-V58 e rimuovera le cache precedenti.
+Base: V57. Diagnostica intervalli aggiunta ai resoconti delle attivita CSV Garmin. Per il file prova ripetuta.csv vengono separati i blocchi aggregati (es. Lap 5 - 11) dai Lap singoli (5, 6, 7...). I Lap singoli con fase Corsa diventano intervalli visualizzabili. Dopo il caricamento su GitHub, chiudere e riaprire la PWA. Eliminare e reimportare l'attivita per popolare i nuovi dati di debug.
