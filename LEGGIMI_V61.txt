@@ -1,0 +1,10 @@
+ROAD TO 70.3 V61
+
+Correzioni:
+- ripristinato il riconoscimento dei CSV Garmin corsa anche quando mancano le colonne "tipo di fase" o "tempo cumulato";
+- riconoscimento automatico corsa esteso a passo medio e cadenza di corsa;
+- lettura FIT estesa ai campi enhanced avg/max speed;
+- velocita media rulli calcolata da distanza e durata esatta quando il FIT non fornisce una velocita valida;
+- mantenute eliminazione delle vecchie reimportazioni e sincronizzazione con tombstone della V60.
+
+Sostituire tutti i file nella root GitHub. Dopo il deploy verificare che il titolo mostri V61. Reimportare una volta il CSV Garmin corsa e il file rulli interessato.
