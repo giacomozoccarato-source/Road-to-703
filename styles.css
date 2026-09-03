@@ -30,5 +30,3 @@
 
 .completedDot{display:inline-flex;align-items:center;gap:4px;color:#9ff4df;font-weight:800;background:#0f302e;border:1px solid #287d69;border-radius:999px;padding:5px 8px;margin-top:7px}
 .recalibrationCard{background:var(--card);border:1px solid #2dd4bf;border-radius:18px;padding:14px}.recalibrationCard h3{margin-top:0}.recalibrationCard .disciplineRow{margin-top:8px}
-
-.intervalDebug{margin-top:12px;background:#241b08;border:1px solid #9a761f;border-radius:14px;overflow:hidden}.intervalDebug summary{padding:12px;cursor:pointer;color:#ffd978}.intervalDebug .debugGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;padding:10px}.intervalDebug .debugGrid div{background:#ffffff0b;border-radius:10px;padding:8px}.intervalDebug .debugGrid b,.intervalDebug .debugGrid small{display:block}.intervalDebug pre{margin:0 10px 10px;padding:10px;border-radius:10px;background:#07111f;color:#bfe9ff;white-space:pre-wrap;word-break:break-word;font-size:10px}@media(min-width:600px){.intervalDebug .debugGrid{grid-template-columns:repeat(3,1fr)}}
