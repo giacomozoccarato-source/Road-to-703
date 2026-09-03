@@ -1,0 +1,1 @@
+V62-debug: aggiunge il pannello DEBUG FIT GREZZO. Caricare tutti i file, verificare V62-debug, eliminare la vecchia attivita e reimportare il FIT originale. Inviare screenshot o JSON del pannello viola.
