@@ -1,9 +1,2 @@
 ROAD TO 70.3 V60
-
-Correzione definitiva reimportazione e sincronizzazione:
-- quando un CSV/FIT viene reimportato, tutte le versioni precedenti con stesso file/data vengono eliminate con tombstone;
-- Firebase non puo piu ripristinare la vecchia attivita con valori discordanti;
-- il vecchio collegamento al piano viene azzerato e la nuova attivita viene collegata come Completata;
-- restano le correzioni V59 su durata 57:00, distanza finale-iniziale e velocita massima.
-
-Caricare tutti i file nella root GitHub sostituendo gli esistenti. Poi reimportare rulli 02.09.csv una sola volta con data 02/09/2026 e Bici/Rulli.
+Build anti-cache. Tutti gli script e i CSS hanno parametro v=60 e il service worker viene registrato senza cache HTTP. Mantiene la correzione parser V59 e aggiunge phaseTypes al debug. Caricare tutti i file sostituendo gli esistenti. Verificare che il titolo mostri V60, poi eliminare e reimportare prova ripetuta.csv.

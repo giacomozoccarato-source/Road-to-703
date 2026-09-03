@@ -1,2 +1,2 @@
 "use strict";
-globalThis.ROAD703_CONFIG = Object.freeze({ APP_VERSION: "V59", PLAN_REVISION: "2026-09-03c" });
+globalThis.ROAD703_CONFIG = Object.freeze({ APP_VERSION: "V60", PLAN_REVISION: "2026-09-03d" });
