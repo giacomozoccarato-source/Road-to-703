@@ -1,0 +1,10 @@
+ROAD TO 70.3 V64-debug
+
+Correzione reale individuata dal debug V62:
+- corretta la dimensione dei tipi base FIT in fitRead;
+- uint32 e uint32z ora usano 4 byte;
+- uint16 e uint16z ora usano 2 byte;
+- uint8z e byte ora usano 1 byte;
+- sint64/uint64/uint64z ora usano 8 byte.
+
+Il bug precedente leggeva campi scalari da 4 byte come quattro valori sovrapposti, producendo gli array anomali visualizzati nel debug. Il pannello DEBUG FIT GREZZO resta attivo per la verifica.
