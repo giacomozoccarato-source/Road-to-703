@@ -1,2 +1,12 @@
 ROAD TO 70.3 V62
-Parser Garmin corsa corretto per intestazioni con unita di misura. Legge riepilogo completo e split Lap.
+Base V61. Correzione parser FIT MagneticDays.
+
+- Gestione dei timestamp compressi FIT, prima ignorati.
+- Uso dell ultima sessione FIT disponibile.
+- Distanza record letta come valore cumulativo massimo.
+- Velocita media calcolata prioritariamente da distanza reale / tempo reale.
+- session avg_speed e media record speed restano solo fallback.
+- Distanza non viene piu ricostruita dalla velocita media quando il FIT contiene la distanza.
+- Cache aggiornata a V62.
+
+Per il test: caricare tutti i file, verificare V62, eliminare la vecchia attivita e reimportare il FIT originale.
