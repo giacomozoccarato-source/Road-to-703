@@ -1,0 +1,2 @@
+ROAD TO 70.3 V57.1
+Base V57 ripristinata. Correzione mirata del menu Dettaglio intervalli: il menu compare per corsa e bici quando sono presenti intervalli Garmin espliciti oppure piu lap/fasi. Il riconoscimento CSV accetta anche numerazioni lap/intervallo non composte da sole cifre. Caricare tutti i file nella root GitHub sostituendo gli esistenti. Dopo il deploy chiudere e riaprire la PWA. Per attivita gia importate senza lap/fasi salvati, eliminare e reimportare il CSV.
