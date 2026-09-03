@@ -1,0 +1,2 @@
+ROAD TO 70.3 V62
+Parser Garmin corsa corretto per intestazioni con unita di misura. Legge riepilogo completo e split Lap.
