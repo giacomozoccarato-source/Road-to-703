@@ -1,8 +1,11 @@
-ROAD TO 70.3 V69 - REVISIONE 2026-09-07f
+ROAD TO 70.3 V69
 
-Oltre alla deduplica generale, vengono eliminati ed esclusi in modo permanente questi record specifici:
-- 31/08/2026: activity_24187703108.csv
-- 04/09/2026: Garmin Corsa
+Base ripristinata: V68 stabile.
 
-L'esclusione viene applicata all'avvio, al salvataggio, dopo un import e durante il merge cloud. Gli ID eliminati vengono registrati per impedirne il ripristino dalla sincronizzazione.
-La dashboard debug S2 resta attiva.
+Unica modifica funzionale:
+- il record 31/08/2026 activity_24187703108.csv viene escluso soltanto dai conteggi della dashboard Debug S2;
+- il record resta nell'archivio attività e non viene cancellato;
+- import CSV/FIT, localStorage, matching e sincronizzazione Firebase non sono stati modificati;
+- l'attività esclusa appare nella sezione Attività S2 escluse con il motivo esplicito.
+
+La corsa non è stata ancora corretta, come richiesto.
