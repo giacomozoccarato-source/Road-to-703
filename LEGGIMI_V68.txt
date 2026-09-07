@@ -1,5 +1,11 @@
-ROAD TO 70.3 V68 - DEBUG ONLY
+ROAD TO 70.3 V68 - GESTIONE ATTIVITA
 
-Unica modifica funzionale: dashboard Performance sostituita con diagnostica S2 in sola lettura.
-Import CSV, import FIT, matching, eliminazione attività, localStorage e Firebase non sono stati modificati.
-La dashboard mostra Bici, Corsa, Nuoto e Forza con elenco completo di pianificato ed eseguito dal 31/08/2026 al 06/09/2026.
+Correzione principale:
+- tutte le attività, abbinate e non abbinate, sono visibili nella schermata Importa;
+- ricerca e filtro per disciplina;
+- modifica ed eliminazione diretta;
+- associazione manuale a qualsiasi seduta del piano;
+- il matching CSV usa data + disciplina + durata e può sostituire un collegamento errato;
+- gli ID eliminati finiscono in deletedActivityIds per evitare il ripristino cloud.
+
+Nota: questa build corregge il caso CSV corse 03.09.csv. Il FIT non è stato modificato e viene bloccato con un messaggio esplicito per evitare regressioni.
