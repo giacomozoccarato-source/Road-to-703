@@ -1,0 +1,14 @@
+ROAD TO 70.3 V68
+
+Dashboard Performance sostituita temporaneamente con DEBUG S2 completa.
+
+Regole:
+- intervallo fisso S2: 31/08/2026 - 06/09/2026;
+- pianificato da data.js, disciplina per disciplina;
+- eseguito da attività importate con RPE, data S2 e disciplina valida;
+- dettaglio visibile di ogni voce conteggiata;
+- sezione separata per attività escluse;
+- nessuna media, storico o KPI avanzato.
+
+Totali pianificati attesi da data.js:
+Bici 212 min; Corsa 140 min; Nuoto 115 min; Forza 60 min; Totale 527 min.
