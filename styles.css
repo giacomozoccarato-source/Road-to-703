@@ -32,3 +32,5 @@
 .recalibrationCard{background:var(--card);border:1px solid #2dd4bf;border-radius:18px;padding:14px}.recalibrationCard h3{margin-top:0}.recalibrationCard .disciplineRow{margin-top:8px}
 
 #performanceKpis{grid-template-columns:repeat(2,1fr)}.weeklyKpi b{font-size:18px}.weeklyKpi small{display:block;margin-top:5px}.weeklyDelta{display:inline-block;margin-top:7px;color:var(--accent);font-size:12px;font-weight:800}@media(max-width:520px){#performanceKpis{grid-template-columns:1fr}}
+
+.disciplineDelta{display:flex;justify-content:space-between;align-items:center;margin-top:7px}.disciplineDelta strong{font-size:13px}.disciplineDelta small{font-size:11px}.mixRow{display:grid;grid-template-columns:1fr auto;gap:5px 10px}.mixRow small{grid-column:1/-1}.kpis .kpi small{display:block;margin-top:4px}
