@@ -1,1 +1,62 @@
-importScripts("./version.js?v=68.2");const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION,CACHE=`road703-${APP_VERSION}`,ASSETS=["./","./version.js","./index.html","./styles.css","./data.js","./strength.js","./app.js","./firebase-sync.js","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable-512.png"];self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(CACHE).then(x=>x.put(e.request,c));return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match("./index.html"))))});
+importScripts("./version.js?v=67");
+const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
+const CACHE = `road703-${APP_VERSION}`;
+const ASSETS = [
+  "./",
+  "./version.js",
+  "./index.html",
+  "./styles.css",
+  "./data.js",
+  "./strength.js",
+  "./app.js",
+  "./firebase-sync.js",
+  "./manifest.webmanifest",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./icon-maskable-512.png"
+];
+
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then(cache => cache.addAll(ASSETS))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET") return;
+
+  const url = new URL(event.request.url);
+  const liveFiles = ["/version.js", "/app.js", "/data.js", "/strength.js", "/styles.css", "/firebase-sync.js", "/sw.js", "/manifest.webmanifest"];
+  const useNetworkFirst = event.request.mode === "navigate" || liveFiles.some(name => url.pathname.endsWith(name));
+
+  if (useNetworkFirst) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE).then(cache => cache.put(event.request, copy));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(hit => hit || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(event.request).then(hit => hit || fetch(event.request).then(response => {
+      const copy = response.clone();
+      caches.open(CACHE).then(cache => cache.put(event.request, copy));
+      return response;
+    }))
+  );
+});
