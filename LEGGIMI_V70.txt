@@ -1,0 +1,18 @@
+ROAD TO 70.3 V70 - RESET ATTIVITA
+
+Cosa fa al primo avvio:
+- azzera tutte le attività importate;
+- azzera lo storico importazioni;
+- rimuove i collegamenti actual, actualRpe e actualLoad dal piano;
+- riporta tutte le sedute pianificate allo stato planned;
+- registra gli ID precedenti tra le eliminazioni, cosi Firebase non puo ripristinarli;
+- esegue il reset una sola volta grazie alla chiave road703-reset-v70-completed.
+
+Cosa non cambia:
+- piano in data.js;
+- libreria forza;
+- import CSV e FIT;
+- sincronizzazione Firebase;
+- dashboard Debug S2.
+
+Dopo il reset puoi reimportare gli allenamenti da zero. I nuovi allenamenti non vengono cancellati ai riavvii successivi.
