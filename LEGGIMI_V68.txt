@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68 - DEBUG ONLY
+
+Unica modifica funzionale: dashboard Performance sostituita con diagnostica S2 in sola lettura.
+Import CSV, import FIT, matching, eliminazione attività, localStorage e Firebase non sono stati modificati.
+La dashboard mostra Bici, Corsa, Nuoto e Forza con elenco completo di pianificato ed eseguito dal 31/08/2026 al 06/09/2026.
