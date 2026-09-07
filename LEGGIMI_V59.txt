@@ -1,2 +1,0 @@
-ROAD TO 70.3 V59
-Correzione mirata sulla base V58: rimosso il vincolo errato che richiedeva un numero sia in Intervallo sia in Lap. Nei CSV Garmin come prova ripetuta.csv, i Lap singoli 5-11 hanno Intervallo vuoto: ora vengono correttamente trasformati in 7 intervalli di corsa. La schermata Debug intervalli resta attiva per verifica. Eliminare la precedente attività e reimportare il CSV.
