@@ -1,0 +1,12 @@
+ROAD TO 70.3 V69
+
+Correzioni:
+- deduplica automatica delle attività all'avvio, al salvataggio, dopo il merge cloud e durante gli import;
+- chiave duplicato: data + disciplina corretta + nome file/titolo normalizzato + durata;
+- tra duplicati viene conservata la voce con più dati e RPE;
+- gli ID rimossi vengono registrati tra le eliminazioni per evitare il ritorno dal cloud;
+- filtro disciplina corretto usando anche il nome file: forza/strength, nuoto/swim, corsa/run, bici/rulli/MagneticDays;
+- i file come 31.08 forza.csv vengono riclassificati come Forza anche se importati con Bici selezionata;
+- dashboard debug S2 mantenuta.
+
+Dopo l'apertura della V69, la pulizia avviene automaticamente e viene sincronizzata nel salvataggio successivo.
