@@ -1,2 +1,0 @@
-ROAD TO 70.3 V58
-Base: V57. Diagnostica intervalli aggiunta ai resoconti delle attivita CSV Garmin. Per il file prova ripetuta.csv vengono separati i blocchi aggregati (es. Lap 5 - 11) dai Lap singoli (5, 6, 7...). I Lap singoli con fase Corsa diventano intervalli visualizzabili. Dopo il caricamento su GitHub, chiudere e riaprire la PWA. Eliminare e reimportare l'attivita per popolare i nuovi dati di debug.
