@@ -1,2 +1,0 @@
-ROAD TO 70.3 V60
-Build anti-cache. Tutti gli script e i CSS hanno parametro v=60 e il service worker viene registrato senza cache HTTP. Mantiene la correzione parser V59 e aggiunge phaseTypes al debug. Caricare tutti i file sostituendo gli esistenti. Verificare che il titolo mostri V60, poi eliminare e reimportare prova ripetuta.csv.
