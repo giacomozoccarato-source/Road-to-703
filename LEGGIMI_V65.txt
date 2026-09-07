@@ -1,0 +1,9 @@
+ROAD TO 70.3 V65
+
+Modifica indicatori minuti:
+- la settimana 1 e esclusa dai KPI minuti;
+- KPI separati: minuti pianificati da S2, minuti eseguiti da S2, aderenza %, settimane valutate;
+- il grafico storico mantiene il confronto settimanale Pianificati vs Eseguiti;
+- la settimana corrente usa solo il pianificato fino a oggi, cosi le sedute future non penalizzano il confronto.
+
+Incluso anche il file INTERVALS_RULLI_S3_S4.txt con i primi quattro allenamenti rulli pronti da copiare in Intervals.icu.
