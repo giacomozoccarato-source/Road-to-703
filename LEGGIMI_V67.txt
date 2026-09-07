@@ -1,0 +1,12 @@
+ROAD TO 70.3 V67
+
+Dashboard Aderenza al piano ristrutturata:
+1. settimana corrente fino a oggi;
+2. discipline della settimana corrente in minuti, scostamento e percentuale;
+3. storico delle sole settimane chiuse dalla S2;
+4. volume medio delle settimane chiuse;
+5. distribuzione per disciplina da S2 fino a oggi;
+6. controlli automatici sulle ultime due settimane chiuse;
+7. grafici carico, RPE e minuti esclusa S1.
+
+Tutti i confronti usano la data dell'attivita e il numero settimana calcolato/associato.
