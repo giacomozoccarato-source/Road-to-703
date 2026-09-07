@@ -1,8 +1,0 @@
-ROAD TO 70.3 V66
-
-Correzione indicatori minuti:
-- eliminato il totale cumulativo ambiguo;
-- confronto separato per ogni settimana da S2: pianificati vs eseguiti, percentuale e scostamento;
-- S1 esclusa anche dal grafico Carico/RPE/Minuti;
-- S1 esclusa dai riepiloghi durata per disciplina;
-- per la settimana corrente vengono conteggiati solo pianificato ed eseguito fino a oggi.
