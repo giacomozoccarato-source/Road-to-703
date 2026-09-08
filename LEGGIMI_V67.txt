@@ -10,3 +10,4 @@ Dashboard Aderenza al piano ristrutturata:
 7. grafici carico, RPE e minuti esclusa S1.
 
 Tutti i confronti usano la data dell'attivita e il numero settimana calcolato/associato.
+8. All'apertura, Dashboard e Calendario mostrano sempre la settimana corrente del piano.
