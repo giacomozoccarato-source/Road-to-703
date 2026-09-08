@@ -4,7 +4,7 @@ const APP_VERSION=(window.ROAD703_CONFIG&&window.ROAD703_CONFIG.APP_VERSION)||"D
 const PLAN=window.ROAD703_PLAN||[],STRENGTH=window.ROAD703_STRENGTH||{},KEY="road703-state";
 const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s));
 function load(){for(const k of [KEY,"road703-v20","road703-v19","road703-v21"]){try{const v=JSON.parse(localStorage.getItem(k)||"null");if(v&&Array.isArray(v.activities))return v}catch(e){}}return{plan:PLAN.map(x=>({...x})),activities:[],imports:[]}}
-let state=load(),week=2,filter="all",chartMode="load",queue=[],current=null,selectedRpe=null,pendingDate="",pendingSport="run",editingActivityId=null;
+let state=load(),week=currentPlanWeek(),filter="all",chartMode="load",queue=[],current=null,selectedRpe=null,pendingDate="",pendingSport="run",editingActivityId=null;
 function rebasePlan(savedPlan){const saved=new Map((Array.isArray(savedPlan)?savedPlan:[]).map(x=>[x.id,x]));return PLAN.map(base=>{const old=saved.get(base.id)||{},out={...base};if(["planned","completed","partial","missed"].includes(old.status))out.status=old.status;if(old.actual)out.actual=old.actual;if(old.actualRpe!=null)out.actualRpe=old.actualRpe;if(old.actualLoad!=null)out.actualLoad=old.actualLoad;return out})}
 state.plan=rebasePlan(state.plan);state.activities=state.activities||[];state.imports=state.imports||[];state.deletedActivityIds=state.deletedActivityIds||[];
 const colors={bike:"var(--bike)",run:"var(--run)",swim:"var(--swim)",strength:"var(--strength)",rest:"#64748b",other:"#94a3b8"};

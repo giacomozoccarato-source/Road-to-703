@@ -10,3 +10,6 @@ Dashboard Aderenza al piano ristrutturata:
 7. grafici carico, RPE e minuti esclusa S1.
 
 Tutti i confronti usano la data dell'attivita e il numero settimana calcolato/associato.
+8. Ripristino avvio: corretto percorso ./app.js (prima puntava a ../app.js e causava 404).
+9. Apertura automatica sulla settimana corrente.
+10. Cache aggiornata con build fix1.
