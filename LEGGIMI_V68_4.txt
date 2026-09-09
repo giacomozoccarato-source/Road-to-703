@@ -1,0 +1,9 @@
+ROAD TO 70.3 V68.4
+
+- Parser nuoto aggiornato in formato coach: distanze senza suffisso m, serie e recuperi su righe separate.
+- p24 e p27 gestite nel test della settimana 3.
+- Parser corsa e bici mantenuti.
+- Pulsante Sincronizza settimana corrente.
+- external_id stabile road703-pXX con upsert, per aggiornare senza duplicare.
+- Easy A / Easy B del lunedi integrate dalla S3 alla S40.
+- Versione, cache e riferimenti risorse aggiornati a V68.4.
