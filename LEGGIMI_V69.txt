@@ -1,7 +1,0 @@
-ROAD TO 70.3 V69 - AGGIORNAMENTO SU V68.5
-
-Contiene la sincronizzazione Intervals del mese attivo: settimana corrente + 3.
-Include bici, corsa e nuoto. Forza e riposo esclusi.
-Usa external_id road703-pXX e upsert=true.
-
-IMPORTANTE: applicare questi file SOPRA la cartella V68.5 esistente senza cancellare app.js. Questo pacchetto contiene solo i file aggiornati e gli asset necessari; app.js della V68.5 resta invariato.
