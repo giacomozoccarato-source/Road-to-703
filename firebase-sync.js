@@ -16,3 +16,16 @@ async function start(u){user=u;booting=true;emit("connecting","Collegamento...",
 auth.onAuthStateChanged(u=>{if(unsubscribe){unsubscribe();unsubscribe=null}if(u)start(u).catch(e=>{booting=false;emit("error","Collegamento non riuscito",String(e.message||e))});else{user=null;booting=true;emit("offline","Cloud non collegato","Accedi con lo stesso account Google.")}});
 window.ROAD703_FIREBASE={queueSave,login:()=>auth.signInWithPopup(provider),logout:()=>auth.signOut()};
 })();
+
+/* ROAD703_V69_MONTH_LOADER */
+(function(){
+  function loadMonthSync(){
+    if(document.querySelector('script[data-road703-v69-month]')) return;
+    const script=document.createElement('script');
+    script.src='./intervals-month.js?v=69';
+    script.dataset.road703V69Month='1';
+    document.head.appendChild(script);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',loadMonthSync);
+  else loadMonthSync();
+})();
