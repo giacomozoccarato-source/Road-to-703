@@ -1,0 +1,15 @@
+ROAD TO 70.3 V68.2
+
+- Aggiunto parser testo nativo Intervals.icu.
+- p25 genera esattamente:
+-12m 165w 85rpm
+
+4x
+-3m 273w 78rpm
+-3m 273w 92rpm
+-4m 165w 85rpm
+
+-5m 145w 85rpm
+
+- Il test usa external_id road703-p25 con upsert=true, quindi aggiorna la seduta esistente.
+- Nessuna sincronizzazione mensile automatica.
