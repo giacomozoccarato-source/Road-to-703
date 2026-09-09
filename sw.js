@@ -1,6 +1,6 @@
-importScripts("./version.js?v=68.5");
+importScripts("./version.js?v=69");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
-const CACHE = `road703-${APP_VERSION}-run-parser1`;
+const CACHE = `road703-${APP_VERSION}-month-sync1`;
 const ASSETS = [
   "./",
   "./version.js",
@@ -10,6 +10,7 @@ const ASSETS = [
   "./strength.js",
   "./app.js",
   "./firebase-sync.js",
+  "./intervals-month.js",
   "./manifest.webmanifest",
   "./icon-192.png",
   "./icon-512.png",

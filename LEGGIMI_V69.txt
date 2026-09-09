@@ -1,9 +1,7 @@
-ROAD TO 70.3 V69 - ELIMINAZIONE MIRATA
+ROAD TO 70.3 V69 - AGGIORNAMENTO SU V68.5
 
-Al primo avvio elimina realmente dal database locale e marca per la rimozione Firebase soltanto:
-1. 31/08/2026 - activity_24187703108.csv
-2. 04/09/2026 - Garmin Corsa proveniente da activity_24238206665.csv
+Contiene la sincronizzazione Intervals del mese attivo: settimana corrente + 3.
+Include bici, corsa e nuoto. Forza e riposo esclusi.
+Usa external_id road703-pXX e upsert=true.
 
-La seconda attività Garmin Corsa del 04/09, proveniente da prova ripetuta.csv, resta conservata.
-Import CSV, import FIT e firebase-sync.js non sono stati modificati.
-La pulizia viene eseguita una sola volta e gli ID eliminati sono aggiunti a deletedActivityIds, così il merge cloud non può ripristinarli.
+IMPORTANTE: applicare questi file SOPRA la cartella V68.5 esistente senza cancellare app.js. Questo pacchetto contiene solo i file aggiornati e gli asset necessari; app.js della V68.5 resta invariato.
