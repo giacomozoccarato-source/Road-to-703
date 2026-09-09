@@ -1,0 +1,2 @@
+ROAD TO 70.3 V68.3
+Sincronizzazione di test della settimana corrente. Esporta bici, corsa e nuoto con external_id stabile. Forza e riposo esclusi.
