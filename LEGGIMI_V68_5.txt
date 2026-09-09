@@ -1,0 +1,2 @@
+ROAD TO 70.3 V68.5
+Parser corsa Intervals aggiornato: Easy Pace, salite HR/RPE e template progressivo Z1-Z2-Z3. Mantiene parser bici e nuoto e sincronizzazione settimana corrente.
