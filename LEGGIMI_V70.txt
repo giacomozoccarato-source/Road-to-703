@@ -1,7 +1,0 @@
-ROAD TO 70.3 V70 - DEBUG ID
-
-Modifica unica:
-- nella dashboard Debug S2 ogni voce mostra ID, nome file e fonte;
-- anche le attività escluse mostrano ID e nome file.
-
-Nessuna eliminazione aggiuntiva. Import CSV/FIT e firebase-sync.js non modificati.
