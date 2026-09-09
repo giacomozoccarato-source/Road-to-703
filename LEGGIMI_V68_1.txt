@@ -1,0 +1,2 @@
+ROAD TO 70.3 V68.1
+Test singolo Intervals: p25 del 09/09/2026, external_id road703-p25, upsert attivo. Nessuna sincronizzazione mensile automatica.
