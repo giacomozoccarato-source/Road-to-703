@@ -1,7 +1,0 @@
-ROAD TO 70.3 V69 - AGGIORNAMENTO SICURO SU V68.5
-
-Copia questi file sopra la V68.5 funzionante.
-NON cancellare né sostituire app.js, data.js, index.html, strength.js o styles.css.
-
-La V69 carica il modulo mese da firebase-sync.js e crea dinamicamente il pulsante dopo Sincronizza settimana corrente.
-Le attività locali, la pagina Attività e il codice base V68.5 non vengono toccati.
