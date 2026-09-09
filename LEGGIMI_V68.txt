@@ -1,9 +1,0 @@
-ROAD TO 70.3 V68
-
-- Sedute Rulli facili del lunedì aggiornate dalla S3 alla S40.
-- Alternanza Easy A / Easy B, con durata esatta 45 o 60 minuti secondo il piano.
-- Watt e cadenza variabili, mantenendo RPE target 2.
-- Aggiunta configurazione iniziale Intervals.icu nella pagina Importa.
-- API Key salvata solo nel browser del dispositivo, esclusa da stato e Firebase.
-- Pulsante Verifica collegamento.
-- Nessun allenamento viene ancora inviato automaticamente a Intervals.icu.
