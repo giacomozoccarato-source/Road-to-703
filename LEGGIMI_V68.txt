@@ -1,11 +1,9 @@
-ROAD TO 70.3 V68 - GESTIONE ATTIVITA
+ROAD TO 70.3 V68
 
-Correzione principale:
-- tutte le attività, abbinate e non abbinate, sono visibili nella schermata Importa;
-- ricerca e filtro per disciplina;
-- modifica ed eliminazione diretta;
-- associazione manuale a qualsiasi seduta del piano;
-- il matching CSV usa data + disciplina + durata e può sostituire un collegamento errato;
-- gli ID eliminati finiscono in deletedActivityIds per evitare il ripristino cloud.
-
-Nota: questa build corregge il caso CSV corse 03.09.csv. Il FIT non è stato modificato e viene bloccato con un messaggio esplicito per evitare regressioni.
+- Sedute Rulli facili del lunedì aggiornate dalla S3 alla S40.
+- Alternanza Easy A / Easy B, con durata esatta 45 o 60 minuti secondo il piano.
+- Watt e cadenza variabili, mantenendo RPE target 2.
+- Aggiunta configurazione iniziale Intervals.icu nella pagina Importa.
+- API Key salvata solo nel browser del dispositivo, esclusa da stato e Firebase.
+- Pulsante Verifica collegamento.
+- Nessun allenamento viene ancora inviato automaticamente a Intervals.icu.
