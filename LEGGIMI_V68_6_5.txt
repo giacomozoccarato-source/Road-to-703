@@ -1,0 +1,7 @@
+ROAD TO 70.3 V68.6.5
+
+- Base: V68.6.4 stabile.
+- Aggiornate tutte le sedute nuoto con rotazione tecnica, CSS breve/lungo, ladder, VO2, resistenza ed endurance.
+- Nessuna seduta Open Water.
+- Mantenute durata, date, settimane, fasi, RPE e ID originali.
+- Invariati Dashboard, Calendario, Performance, Attività, Importa, Firebase e sincronizzazione Intervals Strength.
