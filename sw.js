@@ -1,6 +1,6 @@
-importScripts("./version.js?v=68.6.5");
+importScripts("./version.js?v=68.6.6");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
-const CACHE = `road703-${APP_VERSION}-swim-variety`;
+const CACHE = `road703-${APP_VERSION}-swim-sync-fix`;
 const ASSETS = [
   "./",
   "./version.js",

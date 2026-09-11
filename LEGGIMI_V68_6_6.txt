@@ -1,0 +1,7 @@
+ROAD TO 70.3 V68.6.6
+
+- Corretto errore Intervals sulle nuove sedute nuoto.
+- Rimossa la dipendenza dai vecchi soli template p24/p27 e dai titoli Tecnica + aerobico / CSS 70.3.
+- Le sincronizzazioni settimanale e 4 settimane inviano ora il dettaglio completo di ogni nuova seduta nuoto.
+- Mantenute le 80 sedute nuoto variate della V68.6.5.
+- Struttura V68.6.4, Performance, Attività, Importa, Firebase e dati invariati.

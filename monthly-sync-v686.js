@@ -29,12 +29,7 @@
     throw new Error(`${w.id} ${t}`);
   }
 
-  function swimText(w){
-    const t=w.title||"";
-    if(t.includes("Tecnica + aerobico")) return rows(["300 risc","","8x","50 tecnica","15'' rec","","8x","100 aerobico 1:58-2:02","20'' rec","","4x","50 progressivo","","200 sciolto"]);
-    if(t.includes("CSS/70.3")) return rows(["400 risc","","4x","50 tecnica","15'' rec","","10x","100 CSS 1:52-1:56","20'' rec","","200 sciolto"]);
-    throw new Error(`${w.id} ${t}`);
-  }
+  function swimText(w){return w.details||w.title||"Swim workout"}
 
   function strengthText(w){return `Strength workout\nDuration: ${Number(w.minutes)||60}m\nTarget: ${w.target||"RPE 6-7"}\n\n${w.details||w.title}`}
   function workoutText(w){return w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}
