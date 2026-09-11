@@ -1,6 +1,6 @@
-importScripts("./version.js?v=68.6.3");
+importScripts("./version.js?v=68.6.4");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
-const CACHE = `road703-${APP_VERSION}-performance-strength-fix`;
+const CACHE = `road703-${APP_VERSION}-activities-separated`;
 const ASSETS = [
   "./",
   "./version.js",

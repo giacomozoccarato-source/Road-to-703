@@ -1,0 +1,8 @@
+ROAD TO 70.3 V68.6.4
+
+- Pagina Attività ripristinata e separata.
+- Elenco e dettaglio attività spostati nella pagina Attività.
+- Dettaglio attività rimosso da Performance.
+- Performance conserva KPI, stato, benchmark, grafici, discipline e revisione blocco.
+- Sincronizzazione Intervals conserva palestra come Strength sia per settimana sia per 4 settimane.
+- Piano, parser, Firebase e dati salvati invariati.
