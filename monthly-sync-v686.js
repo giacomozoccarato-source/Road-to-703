@@ -40,24 +40,7 @@
   function workoutType(w){return w.sport==="run"?"Run":w.sport==="swim"?"Swim":"Ride"}
   function monthLabel(value){const [y,m]=value.split("-");return new Intl.DateTimeFormat("it-IT",{month:"long",year:"numeric"}).format(new Date(Number(y),Number(m)-1,1))}
 
-  async function syncSelectedMonth(){
-    const status=$("#intervalsStatus"),button=$("#syncIntervalsMonth");
-    const today=new Date(),planStart=new Date("2026-08-24T12:00:00"),cw=Math.max(1,Math.min(40,Math.floor((today-planStart)/604800000)+1)),lastWeek=Math.min(40,cw+3);
-    const apiKey=($("#intervalsApiKey")?.value||localStorage.getItem(keyName)||"").trim();
-    if(!apiKey){if(status)status.textContent="API Key Intervals.icu mancante.";return}
-    const workouts=PLAN.filter(w=>w.week>=cw&&w.week<=lastWeek&&["bike","run","swim"].includes(w.sport));
-    if(!workouts.length){if(status)status.textContent="Nessun allenamento nelle 4 settimane selezionate.";return}
-    if(button)button.disabled=true;if(status)status.textContent=`Validazione settimane ${cw}-${lastWeek}...`;
-    try{
-      const events=workouts.map(w=>({category:"WORKOUT",start_date_local:w.date+"T00:00:00",name:"Road to 70.3 | "+w.title,type:workoutType(w),description:workoutText(w),external_id:"road703-"+w.id}));
-      const response=await fetch("https://intervals.icu/api/v1/athlete/0/events/bulk?upsert=true",{method:"POST",headers:{Authorization:"Basic "+btoa("API_KEY:"+apiKey),Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(events)});
-      const body=await response.text();if(!response.ok)throw new Error(`HTTP ${response.status}${body?" | "+body.slice(0,180):""}`);
-      if(status)status.textContent=`Settimane ${cw}-${lastWeek} sincronizzate: ${events.length} allenamenti. Forza e riposo esclusi.`;
-    }catch(error){if(status)status.textContent="Sincronizzazione 4 settimane annullata: "+error.message}finally{if(button)button.disabled=false}
-  }
-  function init(){
-    const button=$("#syncIntervalsMonth");
-    if(button)button.onclick=syncSelectedMonth;
-  }
+  async function syncSelectedMonth(){const status=$("#intervalsStatus"),button=$("#syncIntervalsMonth"),today=new Date(),start=new Date("2026-08-24T12:00:00"),cw=Math.max(1,Math.min(40,Math.floor((today-start)/604800000)+1)),last=Math.min(40,cw+3),apiKey=($("#intervalsApiKey")?.value||localStorage.getItem(keyName)||"").trim();if(!apiKey){if(status)status.textContent="API Key Intervals.icu mancante.";return}const workouts=PLAN.filter(w=>w.week>=cw&&w.week<=last&&["bike","run","swim"].includes(w.sport));if(!workouts.length){if(status)status.textContent="Nessun allenamento nelle 4 settimane selezionate.";return}if(button)button.disabled=true;if(status)status.textContent=`Validazione settimane ${cw}-${last}...`;try{const events=workouts.map(w=>({category:"WORKOUT",start_date_local:w.date+"T00:00:00",name:"Road to 70.3 | "+w.title,type:workoutType(w),description:workoutText(w),external_id:"road703-"+w.id})),response=await fetch("https://intervals.icu/api/v1/athlete/0/events/bulk?upsert=true",{method:"POST",headers:{Authorization:"Basic "+btoa("API_KEY:"+apiKey),Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(events)}),body=await response.text();if(!response.ok)throw new Error(`HTTP ${response.status}${body?" | "+body.slice(0,180):""}`);if(status)status.textContent=`Settimane ${cw}-${last} sincronizzate: ${events.length} allenamenti. Forza e riposo esclusi.`}catch(error){if(status)status.textContent="Sincronizzazione 4 settimane annullata: "+error.message}finally{if(button)button.disabled=false}}
+  function init(){const button=$("#syncIntervalsMonth");if(button)button.onclick=syncSelectedMonth}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
