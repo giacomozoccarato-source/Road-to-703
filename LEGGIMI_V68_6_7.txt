@@ -1,0 +1,8 @@
+ROAD TO 70.3 V68.6.7
+
+Correzione mirata:
+- il tipo Intervals per la palestra passa da Strength a Workout;
+- modifica applicata sia alla sincronizzazione settimana corrente sia alle 4 settimane;
+- descrizione, durata e target della seduta forza restano invariati;
+- nuoto variato e relativo fix di sincronizzazione V68.6.6 mantenuti;
+- Performance, Attività, Importa, Firebase, piano e dati salvati invariati.
