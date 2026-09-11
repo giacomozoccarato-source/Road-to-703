@@ -1,0 +1,9 @@
+ROAD TO 70.3 V68.6.1
+
+Correzioni:
+- ripristinata la funzione Importa CSV/FIT;
+- ripristinato l'elenco Attivita importate con apertura, modifica ed eliminazione;
+- mantenute sincronizzazione cloud, backup e sincronizzazione settimana corrente;
+- aggiunto direttamente nell'HTML il pulsante Sincronizza 4 settimane (corrente +3);
+- aggiunto lo script mensile alla cache del Service Worker;
+- forza e riposo restano esclusi da Intervals.icu.
