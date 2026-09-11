@@ -1,0 +1,10 @@
+ROAD TO 70.3 V68.6.3
+
+Correzioni verificate:
+- ripristinata la pagina Performance completa richiesta da app.js;
+- ripristinati KPI, stato allenamento, confronto settimana corrente, grafici, discipline, revisione blocco e resoconti;
+- sincronizzazione Intervals settimanale e 4 settimane estesa alla palestra;
+- palestra esportata come Strength;
+- riposo escluso.
+
+Nessuna modifica a piano, parser attività, Firebase o dati salvati.

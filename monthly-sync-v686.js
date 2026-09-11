@@ -36,11 +36,30 @@
     throw new Error(`${w.id} ${t}`);
   }
 
-  function workoutText(w){return w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):swimText(w)}
-  function workoutType(w){return w.sport==="run"?"Run":w.sport==="swim"?"Swim":"Ride"}
+  function strengthText(w){return `Strength workout\nDuration: ${Number(w.minutes)||60}m\nTarget: ${w.target||"RPE 6-7"}\n\n${w.details||w.title}`}
+  function workoutText(w){return w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}
+  function workoutType(w){return w.sport==="run"?"Run":w.sport==="swim"?"Swim":w.sport==="strength"?"Strength":"Ride"}
   function monthLabel(value){const [y,m]=value.split("-");return new Intl.DateTimeFormat("it-IT",{month:"long",year:"numeric"}).format(new Date(Number(y),Number(m)-1,1))}
 
-  async function syncSelectedMonth(){const status=$("#intervalsStatus"),button=$("#syncIntervalsMonth"),today=new Date(),start=new Date("2026-08-24T12:00:00"),cw=Math.max(1,Math.min(40,Math.floor((today-start)/604800000)+1)),last=Math.min(40,cw+3),apiKey=($("#intervalsApiKey")?.value||localStorage.getItem(keyName)||"").trim();if(!apiKey){if(status)status.textContent="API Key Intervals.icu mancante.";return}const workouts=PLAN.filter(w=>w.week>=cw&&w.week<=last&&["bike","run","swim"].includes(w.sport));if(!workouts.length){if(status)status.textContent="Nessun allenamento nelle 4 settimane selezionate.";return}if(button)button.disabled=true;if(status)status.textContent=`Validazione settimane ${cw}-${last}...`;try{const events=workouts.map(w=>({category:"WORKOUT",start_date_local:w.date+"T00:00:00",name:"Road to 70.3 | "+w.title,type:workoutType(w),description:workoutText(w),external_id:"road703-"+w.id})),response=await fetch("https://intervals.icu/api/v1/athlete/0/events/bulk?upsert=true",{method:"POST",headers:{Authorization:"Basic "+btoa("API_KEY:"+apiKey),Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(events)}),body=await response.text();if(!response.ok)throw new Error(`HTTP ${response.status}${body?" | "+body.slice(0,180):""}`);if(status)status.textContent=`Settimane ${cw}-${last} sincronizzate: ${events.length} allenamenti. Forza e riposo esclusi.`}catch(error){if(status)status.textContent="Sincronizzazione 4 settimane annullata: "+error.message}finally{if(button)button.disabled=false}}
-  function init(){const button=$("#syncIntervalsMonth");if(button)button.onclick=syncSelectedMonth}
+  async function syncCurrentMonth(){
+    const status=$("#intervalsStatus"),button=$("#syncIntervalsMonth"),cw=(function(){const today=new Date(),start=new Date("2026-08-24T12:00:00");return Math.max(1,Math.min(40,Math.floor((today-start)/604800000)+1))})();
+    const apiKey=($("#intervalsApiKey")?.value||localStorage.getItem(keyName)||"").trim();
+    if(!apiKey){if(status)status.textContent="API Key Intervals.icu mancante.";return}
+    const workouts=PLAN.filter(w=>w.week>=cw&&w.week<=Math.min(40,cw+3)&&["bike","run","swim","strength"].includes(w.sport));
+    if(!workouts.length){if(status)status.textContent="Nessun allenamento nelle 4 settimane selezionate.";return}
+    if(button)button.disabled=true;if(status)status.textContent=`Validazione settimane ${cw}-${Math.min(40,cw+3)}...`;
+    try{
+      const events=workouts.map(w=>({category:"WORKOUT",start_date_local:w.date+"T00:00:00",name:"Road to 70.3 | "+w.title,type:workoutType(w),description:workoutText(w),external_id:"road703-"+w.id}));
+      const response=await fetch("https://intervals.icu/api/v1/athlete/0/events/bulk?upsert=true",{method:"POST",headers:{Authorization:"Basic "+btoa("API_KEY:"+apiKey),Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(events)});
+      const body=await response.text();if(!response.ok)throw new Error(`HTTP ${response.status}${body?" | "+body.slice(0,180):""}`);
+      if(status)status.textContent=`Settimane ${cw}-${Math.min(40,cw+3)} sincronizzate: ${events.length} allenamenti. Riposo escluso. Forza sincronizzata come Strength.`;
+    }catch(error){if(status)status.textContent="Sincronizzazione mensile annullata: "+error.message}finally{if(button)button.disabled=false}
+  }
+  function init(){
+    const weekButton=$("#syncIntervalsWeek");if(!weekButton)return;
+    let button=$("#syncIntervalsMonth");
+    if(!button){button=document.createElement("button");button.id="syncIntervalsMonth";button.className="primary wide";button.textContent="Sincronizza 4 settimane (corrente +3)";weekButton.insertAdjacentElement("afterend",button)}
+    button.onclick=syncCurrentMonth;
+  }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
