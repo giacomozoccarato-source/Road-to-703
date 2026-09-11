@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68.6
+
+Aggiunto pulsante "Sincronizza 4 settimane (corrente +3)" nella sezione Intervals.icu.
+La sincronizzazione usa upsert e gli external_id road703-<id>, quindi gli allenamenti gia presenti vengono aggiornati senza duplicazione.
+Forza e riposo sono esclusi. La V68.5 resta invariata come backup.
