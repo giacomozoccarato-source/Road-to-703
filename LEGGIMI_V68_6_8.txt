@@ -1,0 +1,8 @@
+ROAD TO 70.3 V68.6.8
+
+Miglioria mirata:
+- all'apertura l'app seleziona automaticamente la settimana che contiene la data odierna;
+- il calcolo usa le date reali presenti nel piano, non un indice salvato o una data fissa;
+- prima dell'inizializzazione della schermata la settimana viene riallineata a quella corrente;
+- se la data e' prima o dopo il piano, viene aperta rispettivamente la prima o l'ultima settimana;
+- Performance, Attivita, Importa, Firebase, Intervals.icu, piano e dati salvati restano invariati.

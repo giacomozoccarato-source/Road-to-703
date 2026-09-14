@@ -1,6 +1,6 @@
-importScripts("./version.js?v=68.6.7");
+importScripts("./version.js?v=68.6.8");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
-const CACHE = `road703-${APP_VERSION}-strength-workout-type`;
+const CACHE = `road703-${APP_VERSION}-open-current-week`;
 const ASSETS = [
   "./",
   "./version.js",
