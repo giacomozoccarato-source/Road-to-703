@@ -1,6 +1,6 @@
-importScripts("./version.js?v=68.6.9");
+importScripts("./version.js?v=68.6.10");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
-const CACHE = `road703-${APP_VERSION}-ftp295-import-backup`;
+const CACHE = `road703-${APP_VERSION}-open-current-week`;
 const ASSETS = [
   "./",
   "./version.js",

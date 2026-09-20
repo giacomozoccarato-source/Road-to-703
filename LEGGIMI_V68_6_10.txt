@@ -1,0 +1,2 @@
+ROAD TO 70.3 V68.6.10
+Corrette le strutture Intervals.icu per bici e corsa nelle settimane 5-8. Funzioni esistenti conservate.
