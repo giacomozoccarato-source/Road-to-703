@@ -1,0 +1,15 @@
+ROAD TO 70.3 V68.6.9
+
+Aggiornamento completo:
+- piano settimane 5-8 aggiornato con FTP di lavoro 295 W;
+- sedute bici, corsa e nuoto diversificate;
+- incremento graduale della corsa senza aumentare i riferimenti Z2;
+- brick tecnico introduttivo il 10/10/2026;
+- aggiunto Importa backup con validazione JSON;
+- prima dell’importazione viene scaricata automaticamente una copia dello stato locale;
+- importazione compatibile con piano, attività, importazioni e ID eliminati;
+- sincronizzazione Intervals.icu delle settimane 5-8 usa la descrizione completa delle nuove sedute;
+- storico e funzioni esistenti conservati.
+
+Per aggiornare l’app sostituire l’intero pacchetto, non singoli file.
+Dopo la pubblicazione aprire l’app online e verificare che sia mostrata V68.6.9.

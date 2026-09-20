@@ -32,7 +32,7 @@
   function swimText(w){return w.details||w.title||"Swim workout"}
 
   function strengthText(w){return `Strength workout\nDuration: ${Number(w.minutes)||60}m\nTarget: ${w.target||"RPE 6-7"}\n\n${w.details||w.title}`}
-  function workoutText(w){return w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}
+  function workoutText(w){if((w.week>=5&&w.week<=8)&&(w.sport==="bike"||w.sport==="run"))return w.details||w.title;return w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}
   function workoutType(w){return w.sport==="run"?"Run":w.sport==="swim"?"Swim":w.sport==="strength"?"Workout":"Ride"}
   function monthLabel(value){const [y,m]=value.split("-");return new Intl.DateTimeFormat("it-IT",{month:"long",year:"numeric"}).format(new Date(Number(y),Number(m)-1,1))}
 
