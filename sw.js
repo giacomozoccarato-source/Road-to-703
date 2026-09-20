@@ -1,4 +1,4 @@
-importScripts("./version.js?v=68.6.10");
+importScripts("./version.js?v=68.6.11");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
 const CACHE = `road703-${APP_VERSION}-open-current-week`;
 const ASSETS = [

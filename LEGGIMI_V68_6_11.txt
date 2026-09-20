@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68.6.11
+- Importa backup ripristinato.
+- Corsa Intervals con range min/km.
+- Bici Intervals con watt fissi, usando il valore superiore dei range.
+- Funzioni esistenti conservate.

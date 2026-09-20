@@ -5,32 +5,7 @@
   const rows=a=>a.join("\n");
   const keyName="road703-intervals-api-key";
 
-  function intervalsStructuredBlock(w){const m={
-  p41:["-10m 165w 88rpm","","3x","-6m 185w 90rpm","-2m 165w 88rpm","","6x","-20s 195w 105rpm","-1m40s 165w 85rpm","","-5m 150w 85rpm"],
-  p43:["-10m Z1 Pace","-30m Z2 Pace","","6x","-20s Z5 Pace","-1m Z1 Pace","","-5m Z1 Pace"],
-  p45:["-15m 160-210w 85rpm","","3x","-12m 265-274w 90rpm","-4m 160-175w 85rpm","","-8m 145-160w 85rpm"],
-  p46:["-8m Z1 Pace","-32m Z2 Pace","-5m Z1 Pace"],
-  p48:["-15m Z1-Z2 Pace","","4x","-6m 88-91% Pace","-2m Z1 Pace","","-10m Z1 Pace"],
-  p49:["-20m 170-190w 85rpm","","3x","-20m 195-215w 88rpm","-10m 175-190w 85rpm","","-5m easy"],
-  p51:["-10m 160-170w 85rpm","","4x","-4m 185w 82rpm","-4m 180w 95rpm","","6x","-20s 200w 105rpm","-1m40s 165w 85rpm","","-6m 145w 85rpm"],
-  p53:["-10m Z1 Pace","","3x","-8m Z2 Pace","-2m Z1 Pace","","6x","-15s Z5 Pace","-45s Z1 Pace","","-4m Z1 Pace"],
-  p55:["-15m 160-210w 85rpm","","3x","2x","-2m 290-295w 90rpm","-3m 262-268w 90rpm","-5m 160-175w 85rpm","","-8m 145-160w 85rpm"],
-  p56:["-10m Z1 Pace","-25m Z2 Pace","-10m Z1 Pace"],
-  p58:["-15m Z1-Z2 Pace","-1m Z3 Pace","-30s Z1 Pace","-2m Z3 Pace","-1m Z1 Pace","-3m Z3 Pace","-1m30s Z1 Pace","-4m Z3 Pace","-2m Z1 Pace","-3m Z3 Pace","-1m30s Z1 Pace","-2m Z3 Pace","-1m Z1 Pace","-1m Z3 Pace","-30s Z1 Pace","-10m Z1 Pace"],
-  p59:["-25m 170-190w 85rpm","-25m 205-225w 88rpm","-15m 175-190w 85rpm","-25m 205-225w 88rpm","-55m 175-210w 87rpm"],
-  p61:["-12m 160-175w 85rpm","","3x","-8m 185-195w 90rpm","-2m 165w 85rpm","","8x","-15s 205w 110rpm","-1m15s 165w 85rpm","","-6m 145w 85rpm"],
-  p63:["-10m Z1 Pace","-35m Z2 Pace","","6x","-20s Z5 Pace","-1m Z1 Pace","","-4m Z1 Pace"],
-  p65:["-15m 160-210w 85rpm","","5x","-4m 270-278w 72rpm","-2m 270-278w 90rpm","-3m 160-175w 85rpm","","-8m 145-160w 85rpm"],
-  p66:["-8m Z1 Pace","-32m Z2 Pace","-5m Z1 Pace"],
-  p68:["-15m Z1-Z2 Pace","","2x","-12m 91-94% Pace","-4m Z1 Pace","","-12m Z1 Pace"],
-  p69:["-35m 175-195w 85rpm","-45m 195-210w 88rpm","-35m 210-225w 88rpm","-20m 160-185w 85rpm"],
-  p69b:["-5m Z1 Pace","-10m Z2 Pace","-5m Z1 Pace"],
-  p71:["-10m 155-165w 85rpm","","4x","-5m 175-185w 90rpm","-2m 160-170w 85rpm","","6x","-15s 195w 110rpm","-1m45s 160w 85rpm","","-5m 145w 85rpm"],
-  p73:["-10m Z1 Pace","-25m Z2 Pace","","4x","-20s Z5 Pace","-1m Z1 Pace","","-5m Z1 Pace"],
-  p75:["-15m 160-210w 85rpm","-15m 252-268w 90rpm","-5m 165-175w 85rpm","-15m 252-268w 90rpm","-8m 145-160w 85rpm"],
-  p76:["-10m Z1 Pace","-25m Z2 Pace","-5m Z1 Pace"],
-  p78:["-10m Z1 Pace","-15m Z2 Pace","-10m Z3 Pace","-10m Z1 Pace"],
-  p79:["-25m 170-185w 85rpm","","3x","-15m 195-210w 88rpm","-8m 165-180w 85rpm","","-26m 160-185w 85rpm"]};return m[w.id]?m[w.id].join("\\n"):null}
+function intervalsStructuredBlock(w){const m={"p41": ["-10m 170w 88rpm", "", "3x", "-6m 190w 90rpm", "-2m 170w 88rpm", "", "6x", "-20s 195w 105rpm", "-1m40s 170w 85rpm", "", "-5m 150w 85rpm"], "p43": ["-10m Z1 Pace 5.20-5.40", "-30m Z2 Pace 4.55-5.15", "", "6x", "-20s Z5 Pace 3.55-4.10", "-1m Z1 Pace 5.20-5.40", "", "-5m Z1 Pace 5.20-5.40"], "p45": ["-15m 210w 85rpm", "", "3x", "-12m 274w 90rpm", "-4m 175w 85rpm", "", "-8m 160w 85rpm"], "p46": ["-8m Z1 Pace 5.20-5.40", "-32m Z2 Pace 4.55-5.15", "-5m Z1 Pace 5.20-5.40"], "p48": ["-15m Z1 Pace 5.20-5.40", "", "4x", "-6m Z3 Pace 4.28-4.35", "-2m Z1 Pace 5.20-5.40", "", "-10m Z1 Pace 5.20-5.40"], "p49": ["-20m 190w 85rpm", "", "3x", "-20m 215w 88rpm", "-10m 190w 85rpm", "", "-5m 170w 85rpm"], "p51": ["-10m 170w 85rpm", "", "4x", "-4m 185w 82rpm", "-4m 180w 95rpm", "", "6x", "-20s 200w 105rpm", "-1m40s 165w 85rpm", "", "-6m 145w 85rpm"], "p53": ["-10m Z1 Pace 5.20-5.40", "", "3x", "-8m Z2 Pace 4.55-5.12", "-2m Z1 Pace 5.20-5.40", "", "6x", "-15s Z5 Pace 3.55-4.10", "-45s Z1 Pace 5.20-5.40", "", "-4m Z1 Pace 5.20-5.40"], "p55": ["-15m 210w 85rpm", "", "3x", "-2m 295w 90rpm", "-3m 268w 90rpm", "-2m 295w 90rpm", "-3m 268w 90rpm", "-5m 175w 85rpm", "", "-8m 160w 85rpm"], "p56": ["-10m Z1 Pace 5.20-5.40", "-25m Z2 Pace 4.55-5.10", "-10m Z1 Pace 5.20-5.40"], "p58": ["-15m Z1 Pace 5.20-5.40", "-1m Z3 Pace 4.30-4.35", "-30s Z1 Pace 5.20-5.40", "-2m Z3 Pace 4.28-4.35", "-1m Z1 Pace 5.20-5.40", "-3m Z3 Pace 4.26-4.33", "-1m30s Z1 Pace 5.20-5.40", "-4m Z3 Pace 4.22-4.30", "-2m Z1 Pace 5.20-5.40", "-3m Z3 Pace 4.26-4.33", "-1m30s Z1 Pace 5.20-5.40", "-2m Z3 Pace 4.28-4.35", "-1m Z1 Pace 5.20-5.40", "-1m Z3 Pace 4.30-4.35", "-30s Z1 Pace 5.20-5.40", "-10m Z1 Pace 5.20-5.40"], "p59": ["-25m 190w 85rpm", "-25m 225w 88rpm", "-15m 190w 85rpm", "-25m 225w 88rpm", "-55m 210w 87rpm"], "p61": ["-12m 175w 85rpm", "", "3x", "-8m 195w 90rpm", "-2m 165w 85rpm", "", "8x", "-15s 205w 110rpm", "-1m15s 165w 85rpm", "", "-6m 145w 85rpm"], "p63": ["-10m Z1 Pace 5.20-5.40", "-35m Z2 Pace 4.55-5.15", "", "6x", "-20s Z5 Pace 3.55-4.10", "-1m Z1 Pace 5.20-5.40", "", "-4m Z1 Pace 5.20-5.40"], "p65": ["-15m 210w 85rpm", "", "5x", "-4m 278w 72rpm", "-2m 278w 90rpm", "-3m 175w 85rpm", "", "-8m 160w 85rpm"], "p66": ["-8m Z1 Pace 5.20-5.40", "-32m Z2 Pace 5.00-5.18", "-5m Z1 Pace 5.20-5.40"], "p68": ["-15m Z1 Pace 5.20-5.40", "", "2x", "-12m Z3 Pace 4.24-4.30", "-4m Z1 Pace 5.20-5.40", "", "-12m Z1 Pace 5.20-5.40"], "p69": ["-35m 195w 85rpm", "-45m 210w 88rpm", "-35m 225w 88rpm", "-20m 185w 85rpm"], "p69b": ["-5m Z1 Pace 5.20-5.40", "-10m Z2 Pace 4.55-5.10", "-5m Z1 Pace 5.20-5.40"], "p71": ["-10m 165w 85rpm", "", "4x", "-5m 185w 90rpm", "-2m 170w 85rpm", "", "6x", "-15s 195w 110rpm", "-1m45s 160w 85rpm", "", "-5m 145w 85rpm"], "p73": ["-10m Z1 Pace 5.20-5.40", "-25m Z2 Pace 5.00-5.18", "", "4x", "-20s Z5 Pace 3.55-4.10", "-1m Z1 Pace 5.20-5.40", "", "-5m Z1 Pace 5.20-5.40"], "p75": ["-15m 210w 85rpm", "-15m 268w 90rpm", "-5m 175w 85rpm", "-15m 268w 90rpm", "-8m 160w 85rpm"], "p76": ["-10m Z1 Pace 5.20-5.40", "-25m Z2 Pace 5.05-5.20", "-5m Z1 Pace 5.20-5.40"], "p78": ["-10m Z1 Pace 5.20-5.40", "-15m Z2 Pace 5.00-5.10", "-10m Z3 Pace 4.35-4.45", "-10m Z1 Pace 5.20-5.40"], "p79": ["-25m 185w 85rpm", "", "3x", "-15m 210w 88rpm", "-8m 180w 85rpm", "", "-26m 185w 85rpm"]};return m[w.id]?m[w.id].join("\n"):null}
   function bikeText(w){
     const t=w.title||"";
     if(t.includes("Rulli facili | Easy A")) return rows(["-10m 150w 85rpm","","3x",`-${w.minutes===45?5:10}m 170w 88rpm`,"-1m 160w 95rpm","","6x","-30s 180w 100rpm","-1m30s 160w 85rpm","","-5m 145w 85rpm"]);
