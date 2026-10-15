@@ -36,5 +36,3 @@
 .disciplineDelta{display:flex;justify-content:space-between;align-items:center;margin-top:7px}.disciplineDelta strong{font-size:13px}.disciplineDelta small{font-size:11px}.mixRow{display:grid;grid-template-columns:1fr auto;gap:5px 10px}.mixRow small{grid-column:1/-1}.kpis .kpi small{display:block;margin-top:4px}
 
 .activityManageCard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px}.activityManageTop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.activityManageTop h3{margin:4px 0 5px;font-size:15px}.linkedWorkout{margin-top:9px;padding:8px 10px;border-radius:11px;background:#0f302e;border:1px solid #287d69;color:#b5f5e4;font-size:11px}@media(max-width:430px){.bottom button{font-size:9px;padding:7px 2px}.activityManageTop{display:block}}
-
-.strengthStatusPanel{margin:16px 0;padding:14px;border:2px solid var(--strength);border-radius:14px}.workout .meta b{color:var(--brand)}
