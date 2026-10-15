@@ -1,0 +1,10 @@
+ROAD TO 70.3 V70
+- Base stabile V68.6.15.1.2.
+- Nuovo modulo separato intervals-activities-sync.js.
+- Import attività completate Intervals: bici, corsa, nuoto, forza.
+- Prima lettura ultimi 30 giorni; poi ultima sync con sovrapposizione di 2 giorni.
+- Deduplica per ID Intervals e confronto con attività locali.
+- Associazione automatica solo con stessa data, disciplina e durata coerente.
+- RPE manuale locale non sovrascritto.
+- Nessuna cancellazione automatica.
+- monthly-sync-v686.js lasciato invariato byte per byte.
