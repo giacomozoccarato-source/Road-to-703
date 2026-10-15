@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68.6.15.1.1
+- Corretto il titolo dei lunghi pre-febbraio in "Lungo outdoor | volume aerobico".
+- Il parser Intervals V68.6.14 riconosce nuovamente i lunghi.
+- monthly-sync-v686.js invariato byte per byte.
+- Piano senza brick prima di febbraio e taper corretto conservati.
