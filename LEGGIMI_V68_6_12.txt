@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68.6.12
+- Sedute di forza: aggiunti i comandi Fatto, Parziale e Saltato nella scheda esercizi.
+- Intervals.icu: sincronizzazione 4 settimane resa resistente ai titoli non ancora mappati nel parser.
+- Per i workout non mappati viene usato il dettaglio completo della seduta, senza bloccare l’intero invio.
+- Funzioni esistenti conservate.

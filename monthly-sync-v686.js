@@ -15,7 +15,7 @@ function intervalsStructuredBlock(w){const m={"p41": ["-10m 170w 88rpm", "", "3x
     if(t.includes("Q2 sweet spot")) return rows(["-12m 165w 85rpm","","4x","-8m 264w 90rpm","-4m 165w 85rpm","","-8m 145w 85rpm"]);
     if(t.includes("Q2 recuperi ridotti")) return rows(["-12m 165w 85rpm","","4x","-8m 264w 90rpm","-3m 165w 85rpm","","-8m 145w 85rpm"]);
     if(t.includes("Lungo outdoor")){const middle=Math.max(0,Number(w.minutes)-40);return rows(["-20m 165-180w 85rpm","",`-${middle}m 180-205w 87rpm`,"-15m 205-218w 88rpm","","-5m easy"])}
-    throw new Error(`${w.id} ${t}`);
+    return w.details||w.title||"Bike workout";
   }
 
   function runText(w){
@@ -27,7 +27,7 @@ function intervalsStructuredBlock(w){const m={"p41": ["-10m 170w 88rpm", "", "3x
     if(t.includes("Fartlek breve Z3")) return rows(["-15m Z1 Pace","","8x","-2m Z3 Pace","-2m Z1 Pace","","-8m Z1 Pace"]);
     if(t.includes("Fartlek scala")) return rows(["-15m Z1 Pace","","-1m Z3 Pace","-30s Z1 Pace","-2m Z3 Pace","-1m Z1 Pace","-3m Z3 Pace","-1m30s Z1 Pace","-4m Z3 Pace","-2m Z1 Pace","-3m Z3 Pace","-1m30s Z1 Pace","-2m Z3 Pace","-1m Z1 Pace","-1m Z3 Pace","-30s Z1 Pace","","-10m Z1 Pace"]);
     if(t.includes("Salite lunghe introduttive")) return rows(["-15m Z1 HR","","5x","-2m 90-95% HR","-4m 65-75% HR","","-10m Z1 HR"]);
-    throw new Error(`${w.id} ${t}`);
+    return w.details||w.title||"Run workout";
   }
 
   function swimText(w){return w.details||w.title||"Swim workout"}
