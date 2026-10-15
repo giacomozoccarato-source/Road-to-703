@@ -1,0 +1,4 @@
+ROAD TO 70.3 V68.6.13
+- Forza: stato seduta visibile con Fatto / Parziale / Saltato nella scheda esercizi.
+- Intervals.icu: sync corrente +3 confermato; aggiunte strutture per le sedute speciali delle settimane 9-11.
+- Service worker aggiornato per evitare la vecchia build in cache.
