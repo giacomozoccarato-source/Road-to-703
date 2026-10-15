@@ -1,0 +1,5 @@
+ROAD TO 70.3 V68.6.14
+- Intervals.icu: gli scatti da 20 s delle Easy + tecnica usano Z5 Pace 3.55-4.10 invece di Fast RPE7.
+- Recupero da 1 min con Z1 Pace 5.20-5.40.
+- p83 impostata con 6x e struttura richiesta.
+- Sync 4 settimane e correzione Forza della V68.6.13 conservate.
