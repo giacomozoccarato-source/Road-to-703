@@ -1,0 +1,11 @@
+ROAD TO 70.3 V73
+Base: V72.
+
+MODIFICA
+- Eliminati i warm-up rulli di qualita a potenza piatta di 210 W.
+- Warm-up da 12 minuti: 4' 150 W + 4' 175 W + 4' 200 W, 85 rpm.
+- Warm-up da 15 minuti: 5' 150 W + 5' 175 W + 5' 200 W, 85 rpm.
+- Conservata la durata totale originaria.
+- Blocchi principali, recuperi e defaticamento invariati.
+- Strutture allineate sia in app.js sia in monthly-sync-v686.js.
+- Conservata la logica V72 di matching attivita esclusivamente nella stessa settimana.
