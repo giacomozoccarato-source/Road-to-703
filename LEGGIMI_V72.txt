@@ -1,0 +1,8 @@
+ROAD TO 70.3 V72
+- Base V71 verificata.
+- Associazione automatica solo nella stessa settimana del piano.
+- Priorita alla stessa data; alternativa: stessa settimana, disciplina e durata compatibile.
+- Mai matching con settimana precedente o successiva.
+- Candidati equivalenti: nessuna associazione automatica.
+- Attivita extra/non associate: minuti comunque conteggiati nel volume settimanale se hanno RPE.
+- Aderenza al piano e volume reale restano separati.
