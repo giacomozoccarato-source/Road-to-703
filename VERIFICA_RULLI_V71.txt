@@ -1,0 +1,18 @@
+ROAD TO 70.3 V71 - VERIFICA SEDUTE RULLI QUALITA
+
+Fonte primaria verificata: Allenamenti Forza Rulli.docx, sedute L1-L19.
+Totale sedute Rulli qualita presenti nel piano: 40, inclusa la seduta test iniziale.
+
+CORREZIONI APPLICATE
+- p65, settimana 7: ricondotta alla struttura L1: 4x4' 300 W a 70 rpm, recupero 2', 10' a 260 W e 90 rpm.
+- p85, settimana 9: ricondotta alla struttura L1 con gli stessi parametri.
+- Allineate le rispettive strutture per la sincronizzazione Intervals in app.js e monthly-sync-v686.js.
+- p139 e le sedute 5x4 ad alta cadenza non sono state convertite a 70 rpm: la libreria L7 prescrive esplicitamente 5x4' a 300 W e 85 rpm.
+- Le sedute sweet spot, soglia, VO2, ritmo 70.3, scarico e taper sono state lasciate con la loro finalita specifica; non sono state trasformate automaticamente in forza a bassa cadenza.
+
+CONTROLLI
+- Tutte le 40 sedute Rulli qualita sono state estratte e passate in rassegna.
+- Verificata la distinzione tra lavori di forza a 70 rpm e lavori a cadenza ordinaria/alta.
+- Verificata la durata matematica delle due sedute corrette: 12 + 4 x (4 + 2) + 10 + 22 = 68 minuti.
+- Verificata la sintassi JavaScript dei file modificati.
+- Verificata l'integrita dello ZIP finale.
