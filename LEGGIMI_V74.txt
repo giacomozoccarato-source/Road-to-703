@@ -1,0 +1,17 @@
+ROAD TO 70.3 V74
+Base: V72 consegnata.
+
+Warm-up unico concordato per tutte le sedute Rulli qualità:
+- 4' @ 155 W / 85 rpm
+- 3' @ 175 W / 90 rpm
+- 2' @ 190 W / 95 rpm
+- 3x: 20 s @ 210 W / 105 rpm + 40 s @ 165 W / 85 rpm
+- 1' facile @ 155 W / 85 rpm
+Totale: 13 minuti.
+
+Applicazione:
+- 39 sedute Rulli qualità future/di piano aggiornate; escluso p5, test FTP già completato.
+- Descrizioni e minuti pianificati riallineati alla durata reale del warm-up.
+- Conversione Intervals normalizzata centralmente: nessuna seduta Rulli qualità può più partire con un blocco piatto a 210 W.
+- Nessuna variante del warm-up introdotta.
+- Blocco principale, recuperi e defaticamento originali non modificati.
