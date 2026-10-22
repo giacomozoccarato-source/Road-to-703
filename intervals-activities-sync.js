@@ -10,9 +10,9 @@
   const start=x.start_date_local||x.start_date||x.start_time||x.date||x.local_start_date;
   const date=String(start||'').slice(0,10);
   const seconds=n(x.moving_time,x.elapsed_time,x.duration,x.duration_seconds);
-  const minutes=seconds!=null?(seconds>1000?seconds/60:seconds):n(x.minutes)||0;
+  const minutes=seconds!=null?seconds/60:(n(x.minutes)||0);
   const meters=n(x.distance,x.distance_meters,x.distance_metres);
-  const km=meters!=null?(meters>500?meters/1000:meters):n(x.distance_km)||0;
+  const km=meters!=null?meters/1000:(n(x.distance_km)||0);
   const type=x.type||x.sport_type||x.activity_type||x.category;
   const rpe=n(x.icu_rpe,x.rpe,x.session_rpe);
   const load=n(x.icu_training_load,x.training_load,x.load);

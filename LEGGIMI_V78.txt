@@ -1,0 +1,5 @@
+ROAD TO 70.3 V78
+Build visibile: V78-SYNCFIX.
+Correzione import Intervals: moving_time/elapsed_time/duration interpretati in secondi; distance interpretata in metri.
+p85 21/10: 4x4' a 300 W / 70 rpm con warm-up concordato.
+Variabilita piano gia presente nelle settimane 10-12 mantenuta.
