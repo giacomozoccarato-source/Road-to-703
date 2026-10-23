@@ -1,8 +1,0 @@
-ROAD TO 70.3 V68.6.15
-- 12 brick prima di febbraio rimossi e minuti trasferiti al lungo bici del sabato.
-- Brick mantenuti dal 13 febbraio 2027.
-- Taper bici progressivo nelle settimane 37-40.
-- Priorita A/B/C mostrate nelle schede.
-- Aderenza durata: Parziale/Ridotta/Conforme/Extra.
-- Imports deduplicati; parser dati numerici ripulito nel backup; flag plausibilita nuoto/potenza.
-- Correzioni forza, sync 4 settimane e sintassi Intervals conservate.
