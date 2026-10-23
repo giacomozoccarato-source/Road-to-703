@@ -1,6 +1,0 @@
-ROAD TO 70.3 V68.6.15.1
-- Base V68.6.14.
-- Sync Intervals 4 settimane preservato byte per byte.
-- 12 brick prima di febbraio convertiti in recupero e minuti aggiunti alla bici.
-- Primo brick: 13/02/2027.
-- Taper bici: 180/150/105/60 minuti.
