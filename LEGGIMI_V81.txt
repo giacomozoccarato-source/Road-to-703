@@ -1,4 +1,0 @@
-ROAD TO 70.3 V81
-- corretto p94 Corsa aerobica con allunghi brevi nel convertitore Intervals;
-- validazione preventiva di tutte le sedute delle quattro settimane mantenuta tramite generazione completa prima del POST;
-- sincronizzazione corrente +3 e p85 preservati.
