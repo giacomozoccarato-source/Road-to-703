@@ -1,7 +1,0 @@
-ROAD TO 70.3 V71
-- Derivata dalla V70 caricata dall'utente.
-- Revisione completa delle 40 sedute Rulli qualita rispetto alla libreria Allenamenti Forza Rulli L1-L19.
-- Corrette p65 e p85 come lavori L1 a 70 rpm.
-- Allineate le strutture Intervals corrispondenti.
-- Versione applicazione e cache aggiornate a V71.
-- Nessuna modifica alle attivita registrate, Firebase, import FIT/CSV, forza, corsa o nuoto.
