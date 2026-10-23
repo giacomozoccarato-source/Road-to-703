@@ -1,0 +1,4 @@
+ROAD TO 70.3 V79
+Build visibile: V79.
+
+Correzioni: versione coerente; singola logica di invio Intervals; matching attività sulla settimana della data reale, disciplina e durata; rematch delle attività già importate; p85 invariato con warm-up concordato e 4x4 min a 300 W / 70 rpm.

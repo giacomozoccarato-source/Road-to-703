@@ -1,4 +1,4 @@
-importScripts("./version.js?v=77");
+importScripts("./version.js?v=79");
 const APP_VERSION=self.ROAD703_CONFIG.APP_VERSION;
 const CACHE = `road703-${APP_VERSION}-open-current-week`;
 const ASSETS = [
@@ -10,7 +10,6 @@ const ASSETS = [
   "./strength.js",
   "./app.js",
   "./firebase-sync.js",
-  "./monthly-sync-v686.js",
   "./intervals-activities-sync.js",
   "./manifest.webmanifest",
   "./icon-192.png",
@@ -38,7 +37,7 @@ self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
 
   const url = new URL(event.request.url);
-  const liveFiles = ["/version.js", "/app.js", "/data.js", "/strength.js", "/styles.css", "/firebase-sync.js", "/monthly-sync-v686.js", "/sw.js", "/manifest.webmanifest"];
+  const liveFiles = ["/version.js", "/app.js", "/data.js", "/strength.js", "/styles.css", "/firebase-sync.js", "/sw.js", "/manifest.webmanifest"];
   const useNetworkFirst = event.request.mode === "navigate" || liveFiles.some(name => url.pathname.endsWith(name));
 
   if (useNetworkFirst) {
