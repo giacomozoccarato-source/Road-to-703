@@ -1,8 +1,0 @@
-ROAD TO 70.3 V76
-- Corretta p85 del 21/10: 4x4' a 300 W / 70 rpm.
-- Aggiornate tutte le rappresentazioni p85 usate da Intervals.icu.
-- Pulsante test sostituito con aggiornamento dedicato p85.
-- Corretto riconoscimento del titolo 'Rulli qualità' nel modulo 4 settimane.
-- Mantenuto il warm-up concordato senza semplificazioni.
-- Introdotta variabilità dalla libreria nelle settimane 10-12 per nuoto, bici e corsa, mantenendo calendario e carico del blocco.
-- Mantenute le correzioni V75 sulle unità di durata/distanza delle attività Intervals.
