@@ -1,0 +1,6 @@
+ROAD TO 70.3 V83
+- corrette strutture Intervals corsa p105, p116 e p121 con defaticamento esplicito e passi in formato mm:ss;
+- p116 senza blocco annidato ambiguo 2x/5x;
+- matching Intervals: una sola seduta stesso giorno/stesso sport ha priorita, incluso p85 del 21/10;
+- riconciliazione duplicate preservata;
+- sincronizzazione 4 settimane (corrente +3) preservata.
