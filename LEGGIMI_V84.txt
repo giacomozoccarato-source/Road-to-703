@@ -1,0 +1,6 @@
+ROAD TO 70.3 V84
+- import attivita Intervals non elimina piu a monte i tipi non riconosciuti: restano visibili per diagnosi;
+- riconoscimento bici ampliato a indoor/trainer/virtual ride e fallback tipo su altri campi Intervals;
+- descrizioni corsa mantengono Z1/Z2/Z5 per il rendering grafico Intervals e usano passi mm:ss;
+- corretti cooldown e struttura p105/p116/p121;
+- sync 4 settimane preservata.
