@@ -1,0 +1,6 @@
+ROAD TO 70.3 V82
+- import Intervals usa date locali e 45 giorni di lookback;
+- matching stesso giorno prevale senza ambiguita per p85;
+- attivita gia presenti/duplicate vengono riconciliate col piano anziche solo marcate duplicate;
+- matching spostato resta possibile nella stessa settimana per sport e durata;
+- sync 4 settimane preservata.

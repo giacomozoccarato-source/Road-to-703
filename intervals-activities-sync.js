@@ -2,7 +2,7 @@
 (function(){
  const KEY='road703-intervals-api-key', LAST='road703-intervals-activities-last-sync';
  const $=s=>document.querySelector(s);
- const iso=d=>d.toISOString().slice(0,10);
+ const iso=d=>{const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`};
  const n=(v,...fallbacks)=>{for(const x of [v,...fallbacks]){const y=Number(x);if(Number.isFinite(y))return y}return null};
  function sport(v){const s=String(v||'').toLowerCase();if(/ride|cycling|bike|virtualride|mtb/.test(s))return'bike';if(/run|running|trail/.test(s))return'run';if(/swim|swimming/.test(s))return'swim';if(/weight|strength|gym|workout/.test(s))return'strength';return'other'}
  function normalize(x){
@@ -20,8 +20,8 @@
  }
  async function fetchActivities(){
   const key=localStorage.getItem(KEY);if(!key)throw new Error('Salva prima la API Key Intervals.icu.');
-  const now=new Date(),from=new Date(now);from.setDate(from.getDate()-30);
-  const last=localStorage.getItem(LAST);if(last){const d=new Date(last);if(!Number.isNaN(d.getTime())){d.setDate(d.getDate()-2);if(d>from)from.setTime(d.getTime())}}
+  const now=new Date(),from=new Date(now);from.setDate(from.getDate()-45);
+  const last=localStorage.getItem(LAST);if(last){const d=new Date(last);if(!Number.isNaN(d.getTime())){d.setDate(d.getDate()-7);if(d<from)from.setTime(d.getTime())}}
   const url=`https://intervals.icu/api/v1/athlete/0/activities?oldest=${iso(from)}&newest=${iso(now)}`;
   const res=await fetch(url,{headers:{Authorization:'Basic '+btoa('API_KEY:'+key),Accept:'application/json'}});
   if(!res.ok){if(res.status===401)throw new Error('API Key Intervals non valida.');if(res.status===403)throw new Error('Intervals non consente la lettura delle attività.');if(res.status===429)throw new Error('Limite API Intervals raggiunto.');throw new Error(`Errore Intervals ${res.status}.`)}
