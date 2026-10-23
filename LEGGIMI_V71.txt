@@ -1,0 +1,6 @@
+ROAD TO 70.3 V71
+- Base: V70 ricevuta il 23/10/2026.
+- Correzione mirata della sintassi corsa per Intervals.icu.
+- Salite brevi: riscaldamento, recuperi e defaticamento in Z1 Pace; ripetute da 40 secondi in Z5 HR.
+- Salite lunghe introduttive: tratti facili in Z1 Pace; ripetute da 2 minuti in Z5 HR.
+- Nessun altro modulo intenzionalmente modificato.
