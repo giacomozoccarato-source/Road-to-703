@@ -1,0 +1,7 @@
+ROAD TO 70.3 V80
+
+Correzione conservativa dalla V79 fornita:
+- ripristinato modulo sincronizzazione 4 settimane corrente +3;
+- mantenuta sincronizzazione settimana corrente;
+- p85 21/10 normalizzato anche nel modulo 4 settimane: warm-up concordato, 4x4 min 300 W 70 rpm, recupero 3 min, 10 min 248 W 90 rpm, 18 min defaticamento;
+- nessuna ristrutturazione globale del piano applicata in questa build: librerie incluse e audit separato per evitare regressioni non validate.

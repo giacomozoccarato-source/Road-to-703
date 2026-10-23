@@ -38,7 +38,7 @@ function intervalsStructuredBlock(w){const m={"p41": ["-10m 170w 88rpm", "", "3x
   function swimText(w){return w.details||w.title||"Swim workout"}
 
   function strengthText(w){return `Strength workout\nDuration: ${Number(w.minutes)||60}m\nTarget: ${w.target||"RPE 6-7"}\n\n${w.details||w.title}`}
-  function workoutText(w){const structured=intervalsStructuredBlock(w);let text;if(structured)text=structured;else{const extra=EXTRA_STRUCTURED[w.id];text=extra?rows(extra):w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}return qualityWarmupText(w,text)}
+  function workoutText(w){if(w.id==="p85")return rows(["-4m 155w 85rpm","-3m 175w 90rpm","-2m 190w 95rpm","","3x","-20s 210w 105rpm","-40s 165w 85rpm","","-1m 155w 85rpm","","4x","-4m 300w 70rpm","-3m 155w 85rpm","","-10m 248w 90rpm","-18m 160w 85rpm"]);const structured=intervalsStructuredBlock(w);let text;if(structured)text=structured;else{const extra=EXTRA_STRUCTURED[w.id];text=extra?rows(extra):w.sport==="bike"?bikeText(w):w.sport==="run"?runText(w):w.sport==="swim"?swimText(w):strengthText(w)}return qualityWarmupText(w,text)}
   function workoutType(w){return w.sport==="run"?"Run":w.sport==="swim"?"Swim":w.sport==="strength"?"Workout":"Ride"}
   function monthLabel(value){const [y,m]=value.split("-");return new Intl.DateTimeFormat("it-IT",{month:"long",year:"numeric"}).format(new Date(Number(y),Number(m)-1,1))}
 
