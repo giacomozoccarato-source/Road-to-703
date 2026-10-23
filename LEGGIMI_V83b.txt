@@ -1,0 +1,6 @@
+ROAD TO 70.3 V83b
+- matching Intervals ricalcolato anche per attivita gia associate: un solo workout stesso giorno/stesso sport ha priorita;
+- link precedente della stessa attivita viene rimosso prima del rematch;
+- p85 21/10 puo quindi essere riassegnato alla bici dello stesso giorno senza essere bloccato da un collegamento stale;
+- correzioni strutture corsa p105/p116/p121 preservate;
+- sincronizzazione 4 settimane preservata.
