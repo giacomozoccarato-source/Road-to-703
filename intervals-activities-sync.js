@@ -21,7 +21,7 @@
  async function fetchActivities(){
   const key=localStorage.getItem(KEY);if(!key)throw new Error('Salva prima la API Key Intervals.icu.');
   const now=new Date(),from=new Date(now);from.setDate(from.getDate()-30);
-  const last=localStorage.getItem(LAST);if(last){const d=new Date(last);if(!Number.isNaN(d.getTime())){d.setDate(d.getDate()-2);if(d>from)from.setTime(d.getTime())}}
+  /* V83: full 30-day rescan every time; deduplication is handled by activity id. */
   const url=`https://intervals.icu/api/v1/athlete/0/activities?oldest=${iso(from)}&newest=${iso(now)}`;
   const res=await fetch(url,{headers:{Authorization:'Basic '+btoa('API_KEY:'+key),Accept:'application/json'}});
   if(!res.ok){if(res.status===401)throw new Error('API Key Intervals non valida.');if(res.status===403)throw new Error('Intervals non consente la lettura delle attività.');if(res.status===429)throw new Error('Limite API Intervals raggiunto.');throw new Error(`Errore Intervals ${res.status}.`)}
