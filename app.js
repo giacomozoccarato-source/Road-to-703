@@ -18,16 +18,36 @@ function label(a){return a.sport==='bike'?'Bici':a.sport==='run'?'Corsa':a.sport
 function status(v){return v==='completed'?'✅ Completato':v==='partial'?'🟡 Parziale':v==='missed'?'❌ Saltato':'⏳ Da fare'}
 function normalizeLinkedStatuses(){let changed=false;(state.plan||[]).forEach(p=>{if(p.actual&&state.activities.some(a=>a.id===p.actual)&&p.status!=='completed'){p.status='completed';changed=true}});return changed}
 function persist(){normalizeLinkedStatuses();localStorage.setItem(KEY,JSON.stringify(state));render();if(window.ROAD703_FIREBASE)window.ROAD703_FIREBASE.queueSave(JSON.parse(JSON.stringify(state)))}
+function planWeekForDate(date){const d=new Date(String(date||'')+'T12:00:00'),start=new Date('2026-08-24T12:00:00');if(Number.isNaN(d.getTime()))return null;const w=Math.floor((d-start)/604800000)+1;return w>=1&&w<=40?w:null}
+function matchIntervalsActivity(a){
+ if(!a||!a.date||!a.sport||a.sport==='other')return null;
+ const linked=state.plan.find(p=>p.actual===a.id);if(linked)return{plan:linked,score:999,method:'already-linked'};
+ const activityDate=new Date(a.date+'T12:00:00'),activityWeek=planWeekForDate(a.date),external=String(a.sourceExternalId||'');
+ const candidates=state.plan.filter(p=>p.sport===a.sport&&p.sport!=='rest'&&!p.actual).map(p=>{
+  const planDate=new Date(p.date+'T12:00:00'),dayDiff=Math.round((activityDate-planDate)/86400000),sameWeek=p.week===activityWeek;
+  if(external==='road703-'+p.id)return{plan:p,score:200,method:'external-id',dayDiff};
+  if(!sameWeek&&Math.abs(dayDiff)>3)return null;
+  const ratio=(+a.minutes||0)/(+p.minutes||1);let score=sameWeek?55:30,method='week-sport-duration';
+  if(p.date===a.date){score+=20;method='date-sport-duration'}
+  if(ratio>=.92&&ratio<=1.08)score+=25;else if(ratio>=.82&&ratio<=1.18)score+=18;else if(ratio>=.65&&ratio<=1.35)score+=10;else score-=10;
+  const at=norm(a.title),pt=norm(p.title);if(at&&pt&&(at.includes(pt)||pt.includes(at))){score+=25;method='title-'+method}
+  score-=Math.min(12,Math.abs(dayDiff)*2);return{plan:p,score,method,dayDiff,ratio};
+ }).filter(Boolean).sort((x,y)=>y.score-x.score);
+ const best=candidates[0],second=candidates[1];if(!best)return null;
+ return best.method==='external-id'||(best.score>=72&&(!second||best.score-second.score>=8))?best:null;
+}
+function linkIntervalsActivity(a,result){
+ const m=matchIntervalsActivity(a);if(!m){a.matchScore=0;a.matchMethod='unmatched';result.review++;return false}
+ const p=m.plan;p.actual=a.id;p.status=(+a.minutes||0)<(+p.minutes||0)*.5?'partial':'completed';a.plannedWorkoutId=p.id;a.plannedDate=p.date;a.completedDate=a.date;a.matchScore=m.score;a.matchMethod=m.method;result.matched++;return true
+}
 function importIntervalsActivities(items){
  const result={created:0,updated:0,matched:0,review:0,duplicates:0};
  for(const incoming of (Array.isArray(items)?items:[])){
   let a=state.activities.find(x=>x.source==='intervals'&&x.sourceActivityId===incoming.sourceActivityId);
-  if(a){Object.assign(a,{...incoming,id:a.id,rpe:a.rpe??incoming.rpe});result.updated++;continue}
+  if(a){Object.assign(a,{...incoming,id:a.id,rpe:a.rpe??incoming.rpe});result.updated++;if(!state.plan.some(p=>p.actual===a.id))linkIntervalsActivity(a,result);continue}
   const duplicate=state.activities.find(x=>x.sport===incoming.sport&&x.date===incoming.date&&Math.abs((+x.minutes||0)-(+incoming.minutes||0))<=3&&(!x.distanceKm||!incoming.distanceKm||Math.abs(x.distanceKm-incoming.distanceKm)<=Math.max(.3,incoming.distanceKm*.02)));
-  if(duplicate){duplicate.sourceActivityId=incoming.sourceActivityId;duplicate.source='intervals';duplicate.sourceUpdatedAt=incoming.sourceUpdatedAt;result.duplicates++;continue}
-  const candidates=state.plan.filter(x=>x.date===incoming.date&&x.sport===incoming.sport&&!x.actual&&x.sport!=='rest').map(x=>{const ratio=(+incoming.minutes||0)/(+x.minutes||1);let score=85;if(ratio>=.9&&ratio<=1.1)score+=15;else if(ratio>=.8&&ratio<=1.2)score+=10;else if(ratio>=.65&&ratio<=1.35)score+=5;return{x,score}}).sort((a,b)=>b.score-a.score);
-  a={...incoming,matchScore:candidates[0]?.score||0,matchMethod:candidates[0]?'date-sport-duration':'unmatched'};state.activities.push(a);state.imports.push(incoming.id);result.created++;
-  if(candidates[0]&&candidates[0].score>=90){const p=candidates[0].x;p.actual=a.id;p.status=(+a.minutes||0)<(+p.minutes||0)*.5?'partial':'completed';a.plannedWorkoutId=p.id;result.matched++}else result.review++;
+  if(duplicate){duplicate.sourceActivityId=incoming.sourceActivityId;duplicate.source='intervals';duplicate.sourceUpdatedAt=incoming.sourceUpdatedAt;result.duplicates++;if(!state.plan.some(p=>p.actual===duplicate.id))linkIntervalsActivity(duplicate,result);continue}
+  a={...incoming};state.activities.push(a);state.imports.push(incoming.id);result.created++;linkIntervalsActivity(a,result);
  }
  state.imports=[...new Set((state.imports||[]).flat())];persist();return result
 }
