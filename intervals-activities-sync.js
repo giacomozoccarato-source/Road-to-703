@@ -4,7 +4,7 @@
  const $=s=>document.querySelector(s);
  const iso=d=>d.toISOString().slice(0,10);
  const n=(v,...fallbacks)=>{for(const x of [v,...fallbacks]){const y=Number(x);if(Number.isFinite(y))return y}return null};
- function sport(v){const s=String(v||'').toLowerCase();if(/ride|cycling|bike|virtualride|mtb/.test(s))return'bike';if(/run|running|trail/.test(s))return'run';if(/swim|swimming/.test(s))return'swim';if(/weight|strength|gym|workout/.test(s))return'strength';return'other'}
+ function sport(v,x={}){const s=[v,x.type,x.sport_type,x.activity_type,x.category,x.name,x.title,x.source,x.device_name].filter(Boolean).join(' ').toLowerCase();if(/ride|cycling|ciclismo|bike|biking|virtual.?ride|indoor.?cycling|indoor.?bike|trainer|rulli|zwift|rouvy|mywhoosh|wahoo|tacx|mtb/.test(s))return'bike';if(/run|running|trail|corsa/.test(s))return'run';if(/swim|swimming|nuoto/.test(s))return'swim';if(/weight|strength|gym|workout|forza/.test(s))return'strength';const watts=n(x.average_watts,x.avg_power,x.average_power,x.weighted_average_watts,x.normalized_power,x.np,x.max_watts,x.max_power);if(watts!=null&&watts>0)return'bike';return'other'}
  function normalize(x){
   const sid=String(x.id??x.activity_id??x.external_id??'');
   const start=x.start_date_local||x.start_date||x.start_time||x.date||x.local_start_date;
@@ -16,7 +16,7 @@
   const type=x.type||x.sport_type||x.activity_type||x.category;
   const rpe=n(x.icu_rpe,x.rpe,x.session_rpe);
   const load=n(x.icu_training_load,x.training_load,x.load);
-  return{id:'intervals:'+sid,source:'intervals',sourceActivityId:sid,sourceExternalId:x.external_id||null,sourceProvider:x.source||x.device_name||null,sourceUpdatedAt:x.updated_at||x.last_modified||null,date,startTime:String(start||'').slice(11,19),sport:sport(type),title:x.name||x.title||'Attività Intervals',minutes:Math.round(minutes*10)/10,distanceKm:Math.round(km*1000)/1000,avgHr:n(x.average_heartrate,x.avg_hr,x.average_hr),maxHr:n(x.max_heartrate,x.max_hr),avgPower:n(x.average_watts,x.avg_power,x.average_power),normalizedPower:n(x.weighted_average_watts,x.normalized_power,x.np),maxPower:n(x.max_watts,x.max_power),rpe,load,intervalsLoad:load,rawIntervals:{type,source:x.source||null}};
+  return{id:'intervals:'+sid,source:'intervals',sourceActivityId:sid,sourceExternalId:x.external_id||null,sourceProvider:x.source||x.device_name||null,sourceUpdatedAt:x.updated_at||x.last_modified||null,date,startTime:String(start||'').slice(11,19),sport:sport(type,x),title:x.name||x.title||'Attività Intervals',minutes:Math.round(minutes*10)/10,distanceKm:Math.round(km*1000)/1000,avgHr:n(x.average_heartrate,x.avg_hr,x.average_hr),maxHr:n(x.max_heartrate,x.max_hr),avgPower:n(x.average_watts,x.avg_power,x.average_power),normalizedPower:n(x.weighted_average_watts,x.normalized_power,x.np),maxPower:n(x.max_watts,x.max_power),rpe,load,intervalsLoad:load,rawIntervals:{type,source:x.source||null}};
  }
  async function fetchActivities(){
   const key=localStorage.getItem(KEY);if(!key)throw new Error('Salva prima la API Key Intervals.icu.');
